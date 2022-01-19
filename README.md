@@ -21,19 +21,19 @@ BetterBuy is a web-based store platform that provides a wide range of the latest
 
 
 
-Adir Ben-David 40190551 - (beezzyy)
+* Adir Ben-David 40190551 - (beezzyy)
 
-Jonathan Abitbol 40190550 - (yoniabitbol)
+* Jonathan Abitbol 40190550 - (yoniabitbol)
 
-Reuven Ostrofsky 40188881 - (reuven1203)
+* Reuven Ostrofsky 40188881 - (reuven1203)
 
-Michael Roubeiz 40170491 - (mikeflof)
+* Michael Roubeiz 40170491 - (mikeflof)
 
-Alex Wai-wah Ye 40172491 - (alexye0810)
+* Alex Wai-wah Ye 40172491 - (alexye0810)
 
-Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
+* Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
 
-William Au 40133101 - (williamau8985)
+* William Au 40133101 - (williamau8985)
 
 <details>
 <summary>Users Story</summary>
