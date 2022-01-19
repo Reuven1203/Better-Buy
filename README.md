@@ -1,15 +1,5 @@
 # SOEN341 e-Commerce Project
 
-
-## Team Members
-* Adir Ben-David 40190551 - ([GitHub/beezzyy](https://github.com/beezzyy))                
-* Jonathan Abitbol 40190550 - ([GitHub/yoniabitbol](https://github.com/yoniabitbol))
-* Reuven Ostrofsky 40188881 - ([GitHub/reuven1203](https://github.com/reuven1203)) 
-* Michael Roubeiz 40170491 - ([GitHub/mikeflof](https://github.com/mikeflof)) 
-* Alex Wai-wah Ye 40172491 - ([GitHub/alexye0810](https://github.com/alexye0810))
-* Anjali Bhardwaj 40170314 - ([GitHub/anjalibhardwaj1](https://github.com/anjalibhardwaj1))
-* William Au 40133101 - ([GitHub/williamau8985](https://github.com/williamau8985)) 
-
 ## Objective
 
 SOEN 341 Winter 2022 challenges students to develop an e-commerce platform application with creative freedom regarding development and deployment. The website provides customers with the goal to shop the latest electronics easily.
@@ -26,24 +16,6 @@ BetterBuy is a web-based store platform that provides a wide range of the latest
 <li> Secure register and Login with credentials to save user information </li>
 <li> Seemless cart and checkout process </li>
 </ul>
-
-
-
-
-## Team Members
-* Adir Ben-David 40190551 - (beezzyy)
-
-* Jonathan Abitbol 40190550 - (yoniabitbol)
-
-* Reuven Ostrofsky 40188881 - (reuven1203)
-
-* Michael Roubeiz 40170491 - (mikeflof)
-
-* Alex Wai-wah Ye 40172491 - (alexye0810)
-
-* Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
-
-* William Au 40133101 - (williamau8985)
 
 ## Technologies
 <details>
@@ -66,3 +38,11 @@ BetterBuy is a web-based store platform that provides a wide range of the latest
     * TBD
 </details>
 
+## Team Members
+* Adir Ben-David 40190551 - ([GitHub/beezzyy](https://github.com/beezzyy))                
+* Jonathan Abitbol 40190550 - ([GitHub/yoniabitbol](https://github.com/yoniabitbol))
+* Reuven Ostrofsky 40188881 - ([GitHub/reuven1203](https://github.com/reuven1203)) 
+* Michael Roubeiz 40170491 - ([GitHub/mikeflof](https://github.com/mikeflof)) 
+* Alex Wai-wah Ye 40172491 - ([GitHub/alexye0810](https://github.com/alexye0810))
+* Anjali Bhardwaj 40170314 - ([GitHub/anjalibhardwaj1](https://github.com/anjalibhardwaj1))
+* William Au 40133101 - ([GitHub/williamau8985](https://github.com/williamau8985))     
