@@ -15,6 +15,10 @@ Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
 
 William Au 40133101 - (williamau8985)
 
+<details>
+<summary>Users Story</summary>
+<br>
+</details>
 
 <details>
 <summary>Front-End</summary>
