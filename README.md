@@ -1,5 +1,9 @@
-# SOEN341
-E-Commerce Website
+# SOEN341 Electronics E-Commerce Website
+
+## Objective
+
+SOEN 341 Winter 2022 challenges students to create a Best-Buy clone website with complete creative control over development and deployment.
+
 
 
 
