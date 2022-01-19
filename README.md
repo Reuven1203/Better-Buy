@@ -22,20 +22,20 @@ BetterBuy is a web-based store platform that provides a wide range of the latest
 <details>
 <summary>Front-End</summary>
 <br>
-    * HTML5
-    * CSS Styling
-    * JavaScript
-    * Laravel Framework
-    * TBD
+    HTML5 <br>
+    CSS Styling <br>
+    JavaScript<br>
+    Laravel Framework<br>
+    TBD
 </details>
 
 <details>
 <summary>Back-end</summary>
 <br>
-    * Laravel Framework
-    * PHP 
-    * JavaScript
-    * TBD
+    Laravel Framework <br>
+    PHP <br>
+    JavaScript<br>
+    TBD
 </details>
 </details>
 
