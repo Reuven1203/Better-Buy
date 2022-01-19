@@ -35,17 +35,23 @@ BetterBuy is a web-based store platform that provides a wide range of the latest
 
 * William Au 40133101 - (williamau8985)
 
+## Technologies
 <details>
-<summary>Users Story</summary>
-<br>
-</details>
-
 <details>
 <summary>Front-End</summary>
 <br>
+    * HTML5
+    * CSS Styling
+    * JavaScript
+    * Laravel Framework
+    * TBD
 </details>
 
 <details>
 <summary>Back-end</summary>
 <br>
+    * Laravel Framework
+    * PHP 
+    * JavaScript
+    * TBD
 </details>
