@@ -19,9 +19,9 @@ BetterBuy is a web-based store platform that provides a wide range of the latest
 
 ## Technologies
 <details>
-<details>
+<details><br>
 <summary>Front-End</summary>
-<br> <br>
+<br> 
     HTML5 <br>
     CSS Styling <br>
     JavaScript<br>
