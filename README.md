@@ -20,7 +20,7 @@ BetterBuy is a web-based store platform that provides a wide range of the latest
 
 
 
-
+## Team Members
 * Adir Ben-David 40190551 - (beezzyy)
 
 * Jonathan Abitbol 40190550 - (yoniabitbol)
