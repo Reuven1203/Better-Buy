@@ -14,3 +14,10 @@ Alex Wai-wah Ye 40172491 - (alexye0810)
 Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
 
 William Au 40133101 - (williamau8985)
+
+
+<details>
+<summary>How do I dropdown?</summary>
+<br>
+This is how you dropdown.
+</details>
