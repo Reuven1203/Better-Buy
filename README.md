@@ -17,10 +17,20 @@ BetterBuy is a web-based store platform that provides a wide range of the latest
 <li> Seemless cart and checkout process </li>
 </ul>
 
+## Users Stories
+
+<ul>
+<li> 1. As a Customer, I want to be able to register and log-in, so that I can view my saved cart or past purchases. </li>
+<li> 2. As a Customer, I want to be able to browse items and add the to my cart, so that I can checkout and purchase them. </li>
+<li> 3. </li>
+<li> 4. </li>
+</ul>
+
 ## Technologies
 <details>
-<details><br>
+<details>
 <summary>Front-End</summary>
+<br> <br>
     HTML5 <br>
     CSS Styling <br>
     JavaScript<br>
@@ -30,6 +40,7 @@ BetterBuy is a web-based store platform that provides a wide range of the latest
 
 <details>
 <summary>Back-end</summary>
+<br>
     Laravel Framework <br>
     PHP <br>
     JavaScript<br>
