@@ -21,18 +21,19 @@ BetterBuy is a web-based store platform that provides a wide range of the latest
 
 <details>
 <summary>Clients/Customer</summary>
-<br> <br>
     As a Customer, I want to be able to register and log-in, so that I can view my saved cart or past purchases. <br>
     As a Customer, I want to be able to browse items and add the to my cart, so that I can checkout and purchase them. <br>
+</details>
+<details>
+<summary>Seller</summary>
+</details>
+<details>
+<summary>Admin</summary>
 </details>
 
 
 ## Technologies
-
-<details><br>
-
 <details>
-
 <details>
 <summary>Front-End</summary>
 <br> <br>
