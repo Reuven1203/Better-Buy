@@ -30,12 +30,8 @@ BetterBuy is a web-based store platform that provides a wide range of the latest
 ## Technologies
 
 <details><br>
-
-<details>
-
 <details>
 <summary>Front-End</summary>
-<br> <br>
     HTML5 <br>
     CSS Styling <br>
     JavaScript<br>
@@ -45,13 +41,13 @@ BetterBuy is a web-based store platform that provides a wide range of the latest
 
 <details>
 <summary>Back-end</summary>
-<br>
     Laravel Framework <br>
     PHP <br>
     JavaScript<br>
     TBD
 </details>
 </details>
+
 
 ## Team Members
 * Adir Ben-David 40190551 - ([GitHub/beezzyy](https://github.com/beezzyy))                
