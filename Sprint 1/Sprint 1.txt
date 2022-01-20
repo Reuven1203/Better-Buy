@@ -1,0 +1,5 @@
+
+Project GitHub Access
+
+To access the GitHub repository for BetterBuy, navigate to the following link -> https://github.com/Reuven1203/TeamF_SOEN341Project2022
+From there, you will be able to view the source code for the project, the user stories, and wiki pages with more information.
