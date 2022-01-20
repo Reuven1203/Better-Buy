@@ -1,0 +1,32 @@
+Project GitHub Access
+
+To access the GitHub repository for BetterBuy, navigate to the following link -> https://github.com/Reuven1203/TeamF_SOEN341Project2022
+From there, you will be able to view the source code for the project, the user stories, and wiki pages with more information.
+
+Plan for Sprint 2
+
+In Sprint 2, the goal will be to 
+
+
+Task Breakdown for Current Sprint
+
+Adir Ben-David 40190551 - (beezzyy) 
+- Finish the README file
+
+Jonathan Abitbol 40190550 - (yoniabitbol)
+- Finish the README file
+
+Reuven Ostrofsky 40188881 - (reuven1203)
+- Finish the README file
+
+Michael Roubeiz 40170491 - (mikeflof)
+- Create Sprint 1 folder and file for documentation
+
+Alex Wai-wah Ye 40172491 - (alexye0810)
+- Write out 2 user stories to implement in Sprint 2
+
+Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
+- Create the Meeting Minutes file for our meetings in Sprint 1
+
+Abdullah Shaban - ()
+TBD
