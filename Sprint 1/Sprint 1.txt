@@ -22,7 +22,7 @@
     Seller
         - 
     Admin
-        - 
+        - As an Admin, I want the ability to log into the backend of the website so I can view customer profiles.
     
 <<Task Breakdown>>
     Adir Ben-David 40190551 - (beezzyy) 
