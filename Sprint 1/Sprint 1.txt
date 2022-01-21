@@ -8,7 +8,8 @@
              Reuven Ostrofsky 40188881 - (reuven1203), 
              Michael Roubeiz 40170491 - (mikeflof), 
              Alex Wai-wah Ye 40172491 - (alexye0810), 
-             Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
+             Anjali Bhardwaj 40170314 - (anjalibhardwaj1),
+             William Au 40133101 - (williamau8985)
 
 <<Project GitHub Access>>
     To access the GitHub repository for BetterBuy, navigate to the following link -> https://github.com/Reuven1203/TeamF_SOEN341Project2022
@@ -45,6 +46,9 @@
 
     Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
         - Create the Meeting Minutes file for our meetings in Sprint 1
+
+    William Au 40133101 - (williamau8985)
+        - 
 
 <<Plan for Sprint 2>>
     In Sprint 2, the goal will be to begin coding the website. 
