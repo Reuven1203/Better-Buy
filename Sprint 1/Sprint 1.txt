@@ -8,8 +8,8 @@
 <<Users Stories>>
 
     Customer
-        - As a Customer, I want to be able to register and log-in, so that I can view my saved cart or past purchases.
-        - As a Customer, I want to be able to browse items and add the to my cart, so that I can checkout and purchase them.
+        - As a Customer, I want to be able to register and log-in, so that I can view my saved information.
+        - As a Customer, I want to be able to browse items and add the to my cart, so that I can checkout.
     Seller
         - 
     Admin
@@ -38,7 +38,7 @@
         - Create Sprint 1 folder and file for documentation
 
     Alex Wai-wah Ye 40172491 - (alexye0810)
-        - Write out 2 user stories to implement in Sprint 2
+        - Write 2 user stories that will/may be implemented in future sprints by group members
 
     Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
         - Create the Meeting Minutes file for our meetings in Sprint 1
