@@ -38,7 +38,7 @@
         - Create Sprint 1 folder and file for documentation
 
     Alex Wai-wah Ye 40172491 - (alexye0810)
-        - Write out 2 user stories to implement in future sprints
+        - Write 2 user stories that will/may be implemented in future sprints by group members
 
     Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
         - Create the Meeting Minutes file for our meetings in Sprint 1
