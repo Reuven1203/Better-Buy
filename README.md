@@ -40,7 +40,7 @@ BetterBuy is a web-based store platform that provides a wide range of the latest
 ## Team Members
 * Adir Ben-David 40190551 - ([GitHub/beezzyy](https://github.com/beezzyy))                
 * Jonathan Abitbol 40190550 - ([GitHub/yoniabitbol](https://github.com/yoniabitbol))
-* Reuven Ostrofsky 40188881 - ([GitHub/reuven1203](https://github.com/reuven1203)) 
+* Reuven Ostrofsky 40188881 - ([GitHub/reuven1203](https://github.com/reuven1203)) TEAM LEADER
 * Michael Roubeiz 40170491 - ([GitHub/mikeflof](https://github.com/mikeflof)) 
 * Alex Wai-wah Ye 40172491 - ([GitHub/alexye0810](https://github.com/alexye0810))
 * Anjali Bhardwaj 40170314 - ([GitHub/anjalibhardwaj1](https://github.com/anjalibhardwaj1))
