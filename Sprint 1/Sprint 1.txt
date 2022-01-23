@@ -48,7 +48,7 @@
         - Create the Meeting Minutes file for our meetings in Sprint 1
 
     William Au 40133101 - (williamau8985)
-        - 
+        - Worked on the Meeting Minutes
 
 <<Plan for Sprint 2>>
     In Sprint 2, the goal will be to begin coding the website. 
