@@ -49,6 +49,7 @@
 
     Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
         - Create the Meeting Minutes file for our meetings in Sprint 1
+        - Update GitHub Wiki with Meeting Minutes
 
     William Au 40133101 - (williamau8985)
         - Worked on the Meeting Minutes
