@@ -52,7 +52,8 @@
         - Update GitHub Wiki with Meeting Minutes
 
     William Au 40133101 - (williamau8985)
-        - Worked on the Meeting Minutes
+        - Write the Meeting Minutes #1
+        - Write the Meeting Minutes #2
 
 <<Plan for Sprint 2>>
     In Sprint 2, the goal will be to begin coding the website. 
