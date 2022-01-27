@@ -16,7 +16,6 @@
     From there, you will be able to view the source code for the project, the user stories, and wiki pages with more information.
 
 <<Users Stories>>
-
     Customer
         - As a Customer, I want to be able to register and log-in, so that I can view my saved information.
         - As a Customer, I want to be able to browse items and add the to my cart, so that I can checkout.
@@ -46,6 +45,7 @@
 
     Alex Wai-wah Ye 40172491 - (alexye0810)
         - Write 2 user stories that will/may be implemented in future sprints by group members
+        - Add 2 sub-stories for Sprint 2 based on the user stories
 
     Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
         - Create the Meeting Minutes file for our meetings in Sprint 1
