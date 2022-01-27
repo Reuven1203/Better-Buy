@@ -58,4 +58,4 @@
 <<Plan for Sprint 2>>
     In Sprint 2, the goal will be to begin coding the website. 
     Having everyone set up with the Laravel framework and all the documentation prepared in Sprint 1, it will now be time to complete the 4 user stories to set up the website with basic functioning capabilities.
-    Since we are building off Sprint 1, we would like to take any feedback given from our TA and make corrections/improvements to our project. This will be beneficial for when we move onto Spring 3 and 4.
+    Since we are building off Sprint 1, we would like to take any feedback given from our TA and make corrections/improvements to our project. This will be beneficial for when we move onto Sprint 3 and 4.
