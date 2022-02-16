@@ -16,7 +16,7 @@
     From there, you will be able to view the source code for the project, the user stories, and wiki pages with more information.
 
 <<Users Stories>>
-    2 User Stories to be implemented in Sprint 2:
+    2 User Stories to be implemented (1 fully/almost finished and 1 with progress shown) in Sprint 2:
         - As a customer, I want to be able to create and manage my account because I want to save or change my information for future logins
         - As a customer, I want to able to browse items so that I can look for items that interest me
     
