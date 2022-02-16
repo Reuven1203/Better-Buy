@@ -1,0 +1,58 @@
+<<Cover Page>>
+    Website: BetterBuy
+    Course: SOEN 341 Section S
+    Instuctor: Joumana Dargham
+    Group: F
+    Members: Adir Ben-David 40190551 - (beezzyy), 
+             Jonathan Abitbol 40190550 - (yoniabitbol), 
+             Reuven Ostrofsky 40188881 - (reuven1203), 
+             Michael Roubeiz 40170491 - (mikeflof), 
+             Alex Wai-wah Ye 40172491 - (alexye0810), 
+             Anjali Bhardwaj 40170314 - (anjalibhardwaj1),
+             William Au 40133101 - (williamau8985)
+
+<<Project GitHub Access>>
+    To access the GitHub repository for BetterBuy, navigate to the following link -> https://github.com/Reuven1203/TeamF_SOEN341Project2022
+    From there, you will be able to view the source code for the project, the user stories, and wiki pages with more information.
+
+<<Users Stories>>
+    2 User Stories to be implemented in Sprint 2:
+        - As a customer, I want to be able to create and manage my account because I want to save or change my information for future logins
+        - As a customer, I want to able to browse items so that I can look for items that interest me
+    
+<<Task Breakdown>>
+    Adir Ben-David 40190551 - (beezzyy) 
+        - Work on the "Manage Account" user story (#27)
+        - Work on "Create Login page" so users can login to their accounts (#31)
+        - Work on "Create Register page" so users can create accounts (#30)
+
+    Jonathan Abitbol 40190550 - (yoniabitbol)
+        - Work on the "Manage Account" user story (#27)
+        - Work on "Create Login page" so users can login to their accounts (#31)
+        - Work on "Create Register page" so users can create accounts (#30)
+
+    Reuven Ostrofsky 40188881 - (reuven1203)
+        - Work on the "Manage Account" user story (#27)
+        - Work on "Create Login page" so users can login to their accounts (#31)
+        - Work on "Create Register page" so users can create accounts (#30)
+
+    Michael Roubeiz 40170491 - (mikeflof)
+        - Work on the "Browse Items" user story (#29)
+        - Work on "Create Categories" task to browse store items (#34)
+
+    Alex Wai-wah Ye 40172491 - (alexye0810)
+        - Work on the "Browse Items" user story (#29)
+        - Work on "Create Categories" task to browse store items (#34)
+
+    Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
+        - Work on the "Manage Account" user story (#27)
+        - Work on "Create Layout" task to create the layout and design of the website (#33)
+
+    William Au 40133101 - (williamau8985)
+        - Work on the "Manage Account" user story (#27)
+        - Work on "Create Layout" task to create the layout and design of the website (#33)
+
+<<Plan for Sprint 3>>
+The plan for Sprint 3 will be to add any TA feedback from the previous sprint.
+During Sprint 3, a lot more elaboration will be added to the user stories such as deeper explanations, breakdowns of what needs to be done, and how it will be done in the code.
+These will also include more details on testing to ensure code quality.
