@@ -78,5 +78,6 @@ The plan for the next Sprint will also be to fully implement the second user sto
 Adir, Jonathan, Reuven, Anjali, and William will move from working on ((#27) - Managing your profile) user story to the third user story on adding items to the cart. 
 Alex and Michael will continue working on ((#29) - Browsing categories and store items) until it is fully finished and ready for production. If they require help, a person working on the third user (Adding items to the cart) will help them out.
 William and Anjali will also continue working on the meeting minutes if they would like to but other people on the team may take over this responsibility to make the work more equal.
+A lot more elaboration will be added to the user stories such as deeper explanations, breakdowns of what needs to be done, and how it will be done in the code.
 These will also include more details on testing to ensure code quality.
 The integration of Travis or a different build platform will also happen in this sprint.
