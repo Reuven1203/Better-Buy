@@ -17,32 +17,51 @@
 
 <<Users Stories>>
     2 User Stories to be implemented (1 fully/almost finished and 1 with progress shown) in Sprint 2:
-        - As a customer, I want to be able to create and manage my account because I want to save or change my information for future logins
-        - As a customer, I want to able to browse items so that I can look for items that interest me
+        - As a customer, I want to be able to create and manage my account because I want to save or change my information for future logins (#27)
+        - As a customer, I want to be able to browse items so that I can look for items that interest me. (#29)
     
+<<Acceptance Test Suites>>
+    These test suites can also be found under their respective user stories
+    (#27): The user will be able to manage their account -> Register for an account, log in, change their password.
+        1. The user will navigate to the "Register" page to register for an account for the website.
+        2. They will enter a valid email address and if invalid, an error will appear and not allow them to register for an account. 
+        3. The user will also enter a password that meets the length requirement (8 characters or higher) or their registration will be invalid and an error will appear. 
+        4. After all requirements are met, they will be able to create their account and will be navigated back to the home page.
+        5. If logged out, they will be able to log in with these credentials.
+        6. In the case that they forgot their password, they can reset it by clicking "Forgot Password" and entering their email.
+        7. If they click to view their profile, they will get the chance to change their password by entering a password that meets the requirements.
+    (#29): The user will be able to browse categories and view items they would like to buy
+        1. The user will hover/click on the "Category" tab and categories will appear (ex. Laptops, Desktops, Cables).
+        2. The user can select a category they would like to view and will be directed to all the items under that category.
+        3. They will then be able to apply filters by price or by colour to optimize their search.
+        4. After seeing an item they like, they will then be able to click on it and be directed to a page for that item to view more information on it as well as an item description.
+
 <<Task Breakdown>>
     Adir Ben-David 40190551 - (beezzyy) 
         - Work on the "Manage Account" user story (#27)
-        - Work on "Create Login page" so users can login to their accounts (#31)
+        - Work on "Create Login page" so users can log in to their accounts (#31)
         - Work on "Create Register page" so users can create accounts (#30)
 
     Jonathan Abitbol 40190550 - (yoniabitbol)
         - Work on the "Manage Account" user story (#27)
-        - Work on "Create Login page" so users can login to their accounts (#31)
+        - Work on "Create Login page" so users can log in to their accounts (#31)
         - Work on "Create Register page" so users can create accounts (#30)
 
     Reuven Ostrofsky 40188881 - (reuven1203)
         - Work on the "Manage Account" user story (#27)
-        - Work on "Create Login page" so users can login to their accounts (#31)
+        - Work on "Create Login page" so users can log in to their accounts (#31)
         - Work on "Create Register page" so users can create accounts (#30)
 
     Michael Roubeiz 40170491 - (mikeflof)
         - Work on the "Browse Items" user story (#29)
         - Work on "Create Categories" task to browse store items (#34)
+        - Create the Sprint 2 document (#35)
+        - Work on the Acceptance Test Suites for the 2 user stories of Sprint 2
 
     Alex Wai-wah Ye 40172491 - (alexye0810)
         - Work on the "Browse Items" user story (#29)
         - Work on "Create Categories" task to browse store items (#34)
+        - Created logo for our website and set up the Categories section for browsing the shop (#41)
 
     Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
         - Work on the "Manage Account" user story (#27)
@@ -51,8 +70,13 @@
     William Au 40133101 - (williamau8985)
         - Work on the "Manage Account" user story (#27)
         - Work on "Create Layout" task to create the layout and design of the website (#33)
+        - Added website template to act as a base for our website (#39)
 
 <<Plan for Sprint 3>>
 The plan for Sprint 3 will be to add any TA feedback from the previous sprint.
-During Sprint 3, a lot more elaboration will be added to the user stories such as deeper explanations, breakdowns of what needs to be done, and how it will be done in the code.
+The plan for the next Sprint will also be to fully implement the second user story ((#29) - Browsing categories and store items) and to also begin implementing the third user story (Adding items to the cart).
+Adir, Jonathan, Reuven, Anjali, and William will move from working on ((#27) - Managing your profile) user story to the third user story on adding items to the cart. 
+Alex and Michael will continue working on ((#29) - Browsing categories and store items) until it is fully finished and ready for production. If they require help, a person working on the third user (Adding items to the cart) will help them out.
+William and Anjali will also continue working on the meeting minutes if they would like to but other people on the team may take over this responsibility to make the work more equal.
 These will also include more details on testing to ensure code quality.
+The integration of Travis or a different build platform will also happen in this sprint.
