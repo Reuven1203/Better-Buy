@@ -56,7 +56,7 @@
         - Work on the "Browse Items" user story (#29)
         - Work on "Create Categories" task to browse store items (#34)
         - Create the Sprint 2 document (#35)
-        - Work on the Acceptance Test Suites for the 2 user stories of Sprint 2
+        - Work on the Acceptance Test Suites for the 2 user stories of Sprint 2 (#28)
 
     Alex Wai-wah Ye 40172491 - (alexye0810)
         - Work on the "Browse Items" user story (#29)
@@ -65,11 +65,13 @@
 
     Anjali Bhardwaj 40170314 - (anjalibhardwaj1)
         - Work on the "Manage Account" user story (#27)
-        - Work on "Create Layout" task to create the layout and design of the website (#33)
+        - Work on "Create Layout" task to create the layout and design of the registration page (#33)
+        - Write the Meeting Minutes #3
+        - Write the Meeting Minutes #4
 
     William Au 40133101 - (williamau8985)
         - Work on the "Manage Account" user story (#27)
-        - Work on "Create Layout" task to create the layout and design of the website (#33)
+        - Work on "Create Layout" task to create the layout and design of the website and sign-up page (#33)
         - Added website template to act as a base for our website (#39)
 
 <<Plan for Sprint 3>>
