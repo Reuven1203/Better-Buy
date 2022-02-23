@@ -31,10 +31,10 @@
         6. In the case that they forgot their password, they can reset it by clicking "Forgot Password" and entering their email.
         7. If they click to view their profile, they will get the chance to change their password by entering a password that meets the requirements.
     (#29): The user will be able to browse categories and view items they would like to buy
-        1. The user will hover/click on the "Category" tab and categories will appear (ex. Laptops, Desktops, Cables).
-        2. The user can select a category they would like to view and will be directed to all the items under that category.
-        3. They will then be able to apply filters by price or by colour to optimize their search.
-        4. After seeing an item they like, they will then be able to click on it and be directed to a page for that item to view more information on it as well as an item description.
+        1. The user will hover/click on the "Category" tab and categories will appear (ex. Laptops, Desktops, Cables, ...). If nothing appears when hovering then there is an error.
+        2. The user can select a category they would like to view and will be directed to all the items under that category. If after selecting a category and the page does not change to display the category selected then there is an error.
+        3. They will then be able to apply filters by price or by colour to optimize their search and the contents on the page should update to display this.
+        4. After seeing an item they like, they will then be able to click on it and be directed to a page for that item to view more information on it as well as an item description and price.   
 
 <<Task Breakdown>>
     Adir Ben-David 40190551 - (beezzyy) 
