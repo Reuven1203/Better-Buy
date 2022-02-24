@@ -35,6 +35,14 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             $user->forceFill([
                 'name' => $input['name'],
                 'email' => $input['email'],
+                'country' => $input['country'],
+                'address' => $input['address'],
+                'city' => $input['city'],
+                'postalCode' => $input['postalCode'],
+                'cardNumber' => $input['cardNumber'],
+                'expiryDate' => $input['expiryDate'],
+                'csv' => $input['csv']
+
             ])->save();
         }
     }

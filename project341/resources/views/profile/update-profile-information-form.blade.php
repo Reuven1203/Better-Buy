@@ -65,6 +65,55 @@
             <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
             <x-jet-input-error for="email" class="mt-2" />
         </div>
+
+         <!-- Country -->
+         <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="country" value="{{ __('Country') }}" />
+            <x-jet-input id="country" type="text" class="mt-1 block w-full" wire:model.defer="state.country" autocomplete="country" />
+            <x-jet-input-error for="country" class="mt-2" />
+        </div>
+
+        <!-- Address -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="address" value="{{ __('Address') }}" />
+            <x-jet-input id="address" type="text" class="mt-1 block w-full" wire:model.defer="state.address" autocomplete="address" />
+            <x-jet-input-error for="address" class="mt-2" />
+        </div>
+
+        <!-- City -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="city" value="{{ __('City') }}" />
+            <x-jet-input id="city" type="text" class="mt-1 block w-full" wire:model.defer="state.city" autocomplete="city" />
+            <x-jet-input-error for="city" class="mt-2" />
+        </div>
+
+        <!-- Postal Code -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="postalCode" value="{{ __('Postal Code') }}" />
+            <x-jet-input id="postalCode" type="text" class="mt-1 block w-full" wire:model.defer="state.postalCode" autocomplete="postalCode" />
+            <x-jet-input-error for="postalCode" class="mt-2" />
+        </div>
+
+         <!-- Card Number -->
+         <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="cardNumber" value="{{ __('Card Number') }}" />
+            <x-jet-input id="cardNumber" type="number" class="mt-1 block w-full" wire:model.defer="state.cardNumber" autocomplete="cardNumber" />
+            <x-jet-input-error for="cardNumber" class="mt-2" />
+        </div>
+
+         <!-- Expiry Date -->
+         <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="expiryDate" value="{{ __('Expiry Date') }}" />
+            <x-jet-input id="expiryDate" type="text" class="mt-1 block w-full" wire:model.defer="state.expiryDate" autocomplete="expiryDate" />
+            <x-jet-input-error for="expiryDate" class="mt-2" />
+        </div>
+
+         <!-- CSV -->
+         <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="csv" value="{{ __('CSV') }}" />
+            <x-jet-input id="csv" type="number" class="mt-1 block w-full" wire:model.defer="state.csv" autocomplete="csv" />
+            <x-jet-input-error for="csv" class="mt-2" />
+        </div>
     </x-slot>
 
     <x-slot name="actions">
