@@ -20,3 +20,21 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/index', function () {
     return view('index');
 })->name('dashboard');
+
+Route::get('category', function () {
+    return view('category');
+});
+
+Route::get('index', function () {
+    return view('index');
+});
+
+Route::get('categories_laptop', function () {
+    return view('categories_laptop');
+});
+
+Route::get('categories_phone', function () {
+    return view('categories_phone');
+});
+
+
