@@ -1,99 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>BetterBuy</title>
-	<link rel="icon" href="img/Fevicon.png" type="image/png">
-  <link rel="stylesheet" href="{{ asset('/vendors/bootstrap/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('/vendors/fontawesome/css/all.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('/vendors/themify-icons/themify-icons.css') }}">
-  <link rel="stylesheet" href="{{ asset('/vendors/nice-select/nice-select.css') }}">
-  <link rel="stylesheet" href="{{ asset('/vendors/owl-carousel/owl.theme.default.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('/vendors/owl-carousel/owl.carousel.min.css') }}">
 
-  <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
-</head>
-<body>
-  <!--================ Start Header Menu Area =================-->
-	<header class="header_area">
-    <div class="main_menu">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-          <a class="navbar-brand logo_h" href=""><img src="/img/BetterBuy_logo2.png" alt="" style = width:150px;></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-            <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Shop</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="category.html">Shop Category</a></li>
-                  <li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
-                  <li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a></li>
-                  <li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
-                  <li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
-                </ul>
-							</li>
-<!--
-              <li class="nav-item submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Blog</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                  <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-                </ul>
-							</li>
-            -->
+  <!--================ Header start =================-->
+  @include('layouts.header')
+  <!--================ Header end =================-->
 
-							<li class="nav-item submenu dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                  aria-expanded="false">Pages</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-                  <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
-                  <li class="nav-item"><a class="nav-link" href="tracking-order.html">Tracking</a></li>
-                </ul>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            </ul>
-
-            <ul class="nav-shop">
-              <li class="nav-item"><button><i class="ti-search"></i></button></li>
-              <li class="nav-item"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">3</span></button> </li>
-              <li class="nav-item"><button><a class="button button-header>
-              @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('user/profile') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">{{ Auth::user()->name }}</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-            </div>
-            </button></li>
-            
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
-	<!--================ End Header Menu Area =================-->
+  <!--================ Navbar start =================-->
+  @include('layouts.navbar')
+  <!--================ Navbar end =================-->
 
   <main class="site-main">
-    
     <!--================ Hero banner start =================-->
     <section class="hero-banner">
       <div class="container">
@@ -144,7 +58,7 @@
     </section>
     <!--================ Hero Carousel end =================-->
 
-    <!-- ================ trending product section start ================= -->  
+    <!-- ================ trending product section start ================= -->
     <section class="section-margin calc-60px">
       <div class="container">
         <div class="section-intro pb-60px">
@@ -268,7 +182,7 @@
                 <p>Accessories</p>
                 <h4 class="card-product__title"><a href="single-product.html">Blutooth Speaker</a></h4>
                 <p class="card-product__price">$150.00</p>
-              </div> 
+              </div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 col-xl-3">
@@ -291,10 +205,10 @@
         </div>
       </div>
     </section>
-    <!-- ================ trending product section end ================= -->  
+    <!-- ================ trending product section end ================= -->
 
 
-    <!-- ================ offer section start ================= --> 
+    <!-- ================ offer section start ================= -->
     <section class="offer" id="parallax-1" data-anchor-target="#parallax-1" data-300-top="background-position: 20px 30px" data-top-bottom="background-position: 0 20px">
       <div class="container">
         <div class="row">
@@ -309,9 +223,9 @@
         </div>
       </div>
     </section>
-    <!-- ================ offer section end ================= --> 
+    <!-- ================ offer section end ================= -->
 
-    <!-- ================ Best Selling item  carousel ================= --> 
+    <!-- ================ Best Selling item  carousel ================= -->
     <section class="section-margin calc-60px">
       <div class="container">
         <div class="section-intro pb-60px">
@@ -449,24 +363,24 @@
         </div>
       </div>
     </section>
-    <!-- ================ Best Selling item  carousel end ================= --> 
+    <!-- ================ Best Selling item  carousel end ================= -->
 
-    <!-- ================ Blog section start ================= -->  
+    <!-- ================ Blog section start ================= -->
 
-    <!-- ================ Blog section end ================= -->  
+    <!-- ================ Blog section end ================= -->
 
-    <!-- ================ Subscribe section start ================= --> 
+    <!-- ================ Subscribe section start ================= -->
 
-    <!-- ================ Subscribe section end ================= --> 
+    <!-- ================ Subscribe section end ================= -->
 
-    
+
 
   </main>
 
 
-  <!--================ Start footer Area  =================-->	
+  <!--================ Start footer Area  =================-->
 
-	<!--================ End footer Area  =================-->
+  <!--================ End footer Area  =================-->
 
 
 
@@ -479,4 +393,5 @@
   <script src="vendors/mail-script.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>
