@@ -16,22 +16,22 @@
                         {{ __('BetterBuy') }}
                     </x-jet-nav-link>
 
-                    
+                    @if (auth()->user()->role_id == "Admin")
                     <x-jet-nav-link href="{{ route('admin.users.index') }}" :active="request()->routeIs('admin.users.index')">
                         {{ __('Users') }}
                     </x-jet-nav-link>
-                    
-
-                    @if (auth()->user()->role_id == Client)
-                        <x-jet-nav-link href="{{ route('client.orders.index') }}" :active="request()->routeIs('student.lessons.index')">
-                            {{ __('Orders') }}
-                        </x-jet-nav-link>
                     @endif
 
-                    @if (auth()->user()->role_id == Seller)
-                        <x-jet-nav-link href="{{ route('seller.products.index') }}" :active="request()->routeIs('teacher.courses.index')">
-                            {{ __('Products') }}
-                        </x-jet-nav-link>
+                    @if (auth()->user()->role_id == "Client")
+                    <x-jet-nav-link href="{{ route('client.orders.index') }}" :active="request()->routeIs('student.lessons.index')">
+                        {{ __('Orders') }}
+                    </x-jet-nav-link>
+                    @endif
+
+                    @if (auth()->user()->role_id == "Seller" || auth()->user()->role_id == "Admin")
+                    <x-jet-nav-link href="{{ route('seller.products.index') }}" :active="request()->routeIs('teacher.courses.index')">
+                        {{ __('Products') }}
+                    </x-jet-nav-link>
                     @endif
 
                 </div>
