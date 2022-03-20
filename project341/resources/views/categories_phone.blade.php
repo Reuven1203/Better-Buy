@@ -359,6 +359,7 @@
   <script src="vendors/jquery.ajaxchimp.min.js"></script>
   <script src="vendors/mail-script.js"></script>
   <script src="js/main.js"></script>
+  <script src="{{ asset('/js/addedjs.js') }}"></script>
   </body>
 
   </html>
