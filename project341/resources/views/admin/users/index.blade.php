@@ -39,7 +39,7 @@ use App\Http\Controllers\Admin\UserController;
                     </th>
 
                     <th scope="col" width="200" class="px-6 py-3 bg-gray-50">
-
+                        Commands
                     </th>
                 </tr>
             </thead>
@@ -59,6 +59,14 @@ use App\Http\Controllers\Admin\UserController;
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {{$user -> role_id}}
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                        <a href="{{ route('admin.users.edit', $user->id) }}" class="text-indigo-600 hover:text-indigo-900 mb-2 mr-2">Edit</a>
+                        <form class="inline-block" action="{{ route('admin.users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="submit" class="text-red-600 hover:text-red-900 mb-2 mr-2" value="Delete">
+                        </form>
                     </td>
                     @endforeach
             </tbody>
