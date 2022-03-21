@@ -54,12 +54,12 @@
                         <form class="inline-block" action="{{ route('admin.users.edit', $user->id) }}" method="get">
                             <input type="hidden" name="_method" value="Edit">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <a><input type="submit" class="text-blue-600 hover:text-red-900 mb-2 mr-2" value="Edit"></a>
+                            <a><input type="submit" class="text-indigo-600 hover:text-red-900 mb-2 mr-2" style="margin-left:60px" value="Edit"></a>
                         </form>
                         <form class="inline-block" action="{{ route('admin.users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
                             <input type="hidden" name="_method" value="DELETE">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <input type="submit" class="text-red-600 hover:text-red-900 mb-2 mr-2" value="Delete">
+                            <input type="submit" class="text-red-600 hover:text-red-900 mb-2 mr-2" style="margin-left:60px" value="Delete">
                         </form>
                     </td>
                     @endforeach
