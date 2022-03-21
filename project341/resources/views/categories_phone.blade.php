@@ -227,7 +227,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <img class="card-img" src="img/product/phones/Phone8.jpeg" alt="" width="100" height="150">
+                                      <img class="card-img" src="img/products/product8.jpg" alt="" width="100" height="150">
                                       <ul class="card-product__imgOverlay">
                                           <li><button><i class="ti-search"></i></button></li>
                                           <li><button><i class="ti-shopping-cart"></i></button></li>

@@ -1,3 +1,11 @@
+<?php
+
+use Illuminate\Support\Facades\DB;
+
+$products = DB::select('select * from products');
+
+use App\Http\Controllers\Admin\UserController;
+?>
 <!--================ Header start =================-->
 @include('layouts.header')
 <!--================ Header end =================-->
@@ -5,481 +13,189 @@
 @include('layouts.navbar')
 <!--================ Navbar end =================-->
 
-<!-- ================ start banner area ================= -->	
-	<section class="blog-banner-area" id="category">
-		<div class="container h-100">
-			<div class="blog-banner">
-				<div class="text-center">
-					<h1>Shop Laptops</h1>
-					<nav aria-label="breadcrumb" class="banner-breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Shop Laptops</li>
-            </ol>
-          </nav>
-				</div>
-			</div>
+<!-- ================ start banner area ================= -->
+<section class="blog-banner-area" id="category">
+  <div class="container h-100">
+    <div class="blog-banner">
+      <div class="text-center">
+        <h1>Shop Laptops</h1>
+        <nav aria-label="breadcrumb" class="banner-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Shop Laptops</li>
+          </ol>
+        </nav>
+      </div>
     </div>
-	</section>
-	<!-- ================ end banner area ================= -->
+  </div>
+</section>
+<!-- ================ end banner area ================= -->
 
 
-  <!-- ================ category section start ================= -->
-  <section class="section-margin--small mb-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-3 col-lg-4 col-md-5">
-          <div class="sidebar-categories">
-            <div class="head">Browse Categories</div>
-            <ul class="main-categories">
-              <li class="common-filter">
-                <form action="#">
-                  <ul>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Gaming" name="brand"><label for="Gaming">Gaming<span> (50)</span></label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="School" name="brand"><label for="School">School<span> (20)</span></label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Home" name="brand"><label for="Home">Home<span> (20)</span></label></li>
-                    <li class="filter-list"><input class="pixel-radio" type="radio" id="Work" name="brand"><label for="Work">Work<span> (20)</span></label></li>
-                  </ul>
-                </form>
-              </li>
-            </ul>
-          </div>
-          <div class="sidebar-filter">
-            <div class="top-filter-head">Product Filters</div>
-            <div class="common-filter">
-              <div class="head">Brands</div>
+<!-- ================ category section start ================= -->
+<section class="section-margin--small mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-4 col-md-5">
+        <div class="sidebar-categories">
+          <div class="head">Browse Categories</div>
+          <ul class="main-categories">
+            <li class="common-filter">
               <form action="#">
                 <ul>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Apple<span>(29)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label for="asus">Asus<span>(29)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="dell" name="brand"><label for="dell">Dell<span>(19)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="samsung" name="brand"><label for="samsung">Samsung<span>(19)</span></label></li>
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="surface" name="brand"><label for="surface">Surface<span>(19)</span></label></li>
+                  <li class="filter-list"><input class="pixel-radio" type="radio" id="Gaming" name="brand"><label for="Gaming">Gaming<span> (50)</span></label></li>
+                  <li class="filter-list"><input class="pixel-radio" type="radio" id="School" name="brand"><label for="School">School<span> (20)</span></label></li>
+                  <li class="filter-list"><input class="pixel-radio" type="radio" id="Home" name="brand"><label for="Home">Home<span> (20)</span></label></li>
+                  <li class="filter-list"><input class="pixel-radio" type="radio" id="Work" name="brand"><label for="Work">Work<span> (20)</span></label></li>
                 </ul>
               </form>
-            </div>
-            <div class="common-filter">
-              <div class="head">Price</div>
-              <div class="price-range-area">
-                <div id="price-range"></div>
-                <div class="value-wrapper d-flex">
-                  <div class="price">Price:</div>
-                  <span>$</span>
-                  <div id="lower-value"></div>
-                  <div class="to">to</div>
-                  <span>$</span>
-                  <div id="upper-value"></div>
-                </div>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-filter">
+          <div class="top-filter-head">Product Filters</div>
+          <div class="common-filter">
+            <div class="head">Brands</div>
+            <form action="#">
+              <ul>
+                <li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Apple<span>(29)</span></label></li>
+                <li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label for="asus">Asus<span>(29)</span></label></li>
+                <li class="filter-list"><input class="pixel-radio" type="radio" id="dell" name="brand"><label for="dell">Dell<span>(19)</span></label></li>
+                <li class="filter-list"><input class="pixel-radio" type="radio" id="samsung" name="brand"><label for="samsung">Samsung<span>(19)</span></label></li>
+                <li class="filter-list"><input class="pixel-radio" type="radio" id="surface" name="brand"><label for="surface">Surface<span>(19)</span></label></li>
+              </ul>
+            </form>
+          </div>
+          <div class="common-filter">
+            <div class="head">Price</div>
+            <div class="price-range-area">
+              <div id="price-range"></div>
+              <div class="value-wrapper d-flex">
+                <div class="price">Price:</div>
+                <span>$</span>
+                <div id="lower-value"></div>
+                <div class="to">to</div>
+                <span>$</span>
+                <div id="upper-value"></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-xl-9 col-lg-8 col-md-7">
-          <!-- Start Filter Bar -->
-          <div class="filter-bar d-flex flex-wrap align-items-center">
-            <div class="sorting">
-              <select>
-                <option value="1">Default sorting</option>
-                <option value="1">Default sorting</option>
-                <option value="1">Default sorting</option>
-              </select>
-            </div>
-            <div class="sorting mr-auto">
-              <select>
-                <option value="1">Show 12</option>
-                <option value="1">Show 12</option>
-                <option value="1">Show 12</option>
-              </select>
-            </div>
-            <div>
-              <div class="input-group filter-bar-search">
-                <input type="text" placeholder="Search">
-                <div class="input-group-append">
-                  <button type="button"><i class="ti-search"></i></button>
-                </div>
+      </div>
+      <div class="col-xl-9 col-lg-8 col-md-7">
+        <!-- Start Filter Bar -->
+        <div class="filter-bar d-flex flex-wrap align-items-center">
+          <div class="sorting">
+            <select>
+              <option value="1">Default sorting</option>
+              <option value="1">Default sorting</option>
+              <option value="1">Default sorting</option>
+            </select>
+          </div>
+          <div class="sorting mr-auto">
+            <select>
+              <option value="1">Show 12</option>
+              <option value="1">Show 12</option>
+              <option value="1">Show 12</option>
+            </select>
+          </div>
+          <div>
+            <div class="input-group filter-bar-search">
+              <input type="text" placeholder="Search">
+              <div class="input-group-append">
+                <button type="button"><i class="ti-search"></i></button>
               </div>
             </div>
           </div>
-          <!-- End Filter Bar -->
-          <!-- Start Best Seller -->
-          <section class="lattest-product-area pb-40 category-list">
-            <div class="row">
-              <div class="col-md-6 col-lg-4">
-                <div class="card text-center card-product">
-                  <div class="card-product__img">
-                    <img class="card-img" src="img/product/Product1.jpg" alt="" width="100" height="100">
-                    <ul class="card-product__imgOverlay">
-                      <li><button class="modal-button" href="#myModal1"><i class="ti-search"></i></button></li>
-                      <li><button><i class="ti-shopping-cart"></i></button></li>
-                      <li><button><i class="ti-heart"></i></button></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <p>Electronics</p>
-                    <h4 class="card-product__title"><a href="#">Dell Inspiron 14</a></h4>
-                    <p class="card-product__price">$750.00</p>
-                  </div>
+        </div>
+        <!-- End Filter Bar -->
+        <!-- Start Best Seller -->
+    
+        <section class="lattest-product-area pb-40 category-list">
+          <div class="row">
+          @foreach($products as $product)
+            <div class="col-md-6 col-lg-4">
+              <div class="card text-center card-product">
+                <div class="card-product__img">
+                  <img class="card-img" src="{{ asset('/img/products')}}/{{$product->image}}" alt="" width="100" height="100">
+                  <ul class="card-product__imgOverlay">
+                    <li><button class="modal-button" href="#myModal1"><i class="ti-search"></i></button></li>
+                    <li><button><i class="ti-shopping-cart"></i></button></li>
+                    <li><button><i class="ti-heart"></i></button></li>
+                  </ul>
                 </div>
-                <!-- The Modal -->
-		        <div id="myModal1" class="modal">
-  		            <!-- Modal content -->
-  			        <div class="modal-content">
-    			        <span class="close">&times;</span>
-   		 	            <img class="center" src="img/product/Product4.jpg" alt="" width="200" height="400">
-    			        <p>14 Inch Dell Computer ideal for home and school use.</p>
-    			        <p class="card-product__price">$750.00</p>
-  			        </div>
-		        </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card text-center card-product">
-                  <div class="card-product__img">
-                    <img class="card-img" src="img/product/Product2.jfif" alt="" width="100" height="100">
-                    <ul class="card-product__imgOverlay">
-                      <li><button class="modal-button" href="#myModal2"><i class="ti-search"></i></button></li>
-                      <li><button><i class="ti-shopping-cart"></i></button></li>
-                      <li><button><i class="ti-heart"></i></button></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <p>Electronics</p>
-                    <h4 class="card-product__title"><a href="#">Dell Latitude 14</a></h4>
-                    <p class="card-product__price">$950.00</p>
-                  </div>
-                </div>
-                <!-- The Modal -->
-		        <div id="myModal2" class="modal">
-  		            <!-- Modal content -->
-  			        <div class="modal-content">
-    			        <span class="close">&times;</span>
-   		 	            <img class="center" src="img/product/Product4.jpg" alt="" width="200" height="400">
-    			        <p>14 Inch Dell Work Computer with 2 years support included</p>
-    			        <p class="card-product__price">$950.00</p>
-  			        </div>
-		        </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card text-center card-product">
-                  <div class="card-product__img">
-                    <img class="card-img" src="img/product/Product3.jfif" alt="" width="100" height="100">
-                    <ul class="card-product__imgOverlay">
-                      <li><button class="modal-button" href="#myModal3"><i class="ti-search"></i></button></li>
-                      <li><button><i class="ti-shopping-cart"></i></button></li>
-                      <li><button><i class="ti-heart"></i></button></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <p>Electronics</p>
-                    <h4 class="card-product__title"><a href="#">Dell XPS 14</a></h4>
-                    <p class="card-product__price">$1250.00</p>
-                  </div>
-                </div>
-                <!-- The Modal -->
-		        <div id="myModal3" class="modal">
-  		            <!-- Modal content -->
-  			        <div class="modal-content">
-    			        <span class="close">&times;</span>
-   		 	            <img class="center" src="img/product/Product3.jfif" alt="" width="200" height="400">
-    			        <p>14 Inch Dell Computer with QHD resolution</p>
-    			        <p class="card-product__price">$1250.00</p>
-  			        </div>
-		        </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card text-center card-product">
-                  <div class="card-product__img">
-                    <img class="card-img" src="img/product/Product4.jpg" alt="" width="100" height="100">
-                    <ul class="card-product__imgOverlay">
-                      <li><button class="modal-button" href="#myModal4"><i class="ti-search"></i></button></li>
-                      <li><button><i class="ti-shopping-cart"></i></button></li>
-                      <li><button><i class="ti-heart"></i></button></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <p>Electronics</p>
-                    <h4 class="card-product__title"><a href="#">Apple MacBook 14</a></h4>
-                    <p class="card-product__price">$1250.00</p>
-                  </div>
-                </div>
-                <!-- The Modal -->
-		        <div id="myModal4" class="modal">
-  		            <!-- Modal content -->
-  			        <div class="modal-content">
-    			        <span class="close">&times;</span>
-   		 	            <img class="center" src="img/product/Product4.jpg" alt="" width="200" height="400">
-    			        <p>14 Inch apple Computer that has a powerful M1 Chip</p>
-    			        <p class="card-product__price">$1250.00</p>
-  			        </div>
-		        </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card text-center card-product">
-                  <div class="card-product__img">
-                    <img class="card-img" src="img/product/Product5.jpg" alt="" width="100" height="100">
-                    <ul class="card-product__imgOverlay">
-                      <li><button class="modal-button" href="#myModal5"><i class="ti-search"></i></button></li>
-                      <li><button><i class="ti-shopping-cart"></i></button></li>
-                      <li><button><i class="ti-heart"></i></button></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <p>Electronics</p>
-                    <h4 class="card-product__title"><a href="#">Apple Mac 21</a></h4>
-                    <p class="card-product__price">$2000.00</p>
-                  </div>
-                </div>
-                <!-- The Modal -->
-		        <div id="myModal5" class="modal">
-  		            <!-- Modal content -->
-  			        <div class="modal-content">
-    			        <span class="close">&times;</span>
-   		 	            <img class="center" src="img/product/Product5.jpg" alt="" width="200" height="400">
-    			        <p>21 Inch apple Computer that has a powerful M1 Chip</p>
-    			        <p class="card-product__price">$2000.00</p>
-  			        </div>
-		        </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card text-center card-product">
-                  <div class="card-product__img">
-                    <img class="card-img" src="img/product/Product6.jpg" alt="" width="100" height="100">
-                    <ul class="card-product__imgOverlay">
-                      <li><button class="modal-button" href="#myModal6"><i class="ti-search"></i></button></li>
-                      <li><button><i class="ti-shopping-cart"></i></button></li>
-                      <li><button><i class="ti-heart"></i></button></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <p>Electronics</p>
-                    <h4 class="card-product__title"><a href="#">Apple MacBook Pro 16</a></h4>
-                    <p class="card-product__price">$1750.00</p>
-                  </div>
-                </div>
-                <!-- The Modal -->
-		        <div id="myModal6" class="modal">
-  		            <!-- Modal content -->
-  			        <div class="modal-content">
-    			        <span class="close">&times;</span>
-   		 	            <img class="center" src="img/product/Product6.jpg" alt="" width="200" height="400">
-    			        <p>16 Inch apple Computer that has a powerful M1 Chip</p>
-    			        <p class="card-product__price">$1750.00</p>
-  			        </div>
-		        </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card text-center card-product">
-                  <div class="card-product__img">
-                    <img class="card-img" src="img/product/Product7.jpg" alt="" width="100" height="100">
-                    <ul class="card-product__imgOverlay">
-                      <li><button><i class="ti-search"></i></button></li>
-                      <li><button><i class="ti-shopping-cart"></i></button></li>
-                      <li><button><i class="ti-heart"></i></button></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <p>Electronics</p>
-                    <h4 class="card-product__title"><a href="#">Samsung Flex Pro 14</a></h4>
-                    <p class="card-product__price">$1250.00</p>
-                  </div>
-                </div>
-                <!-- The Modal -->
-		        <div id="myModal7" class="modal">
-  		            <!-- Modal content -->
-  			        <div class="modal-content">
-    			        <span class="close">&times;</span>
-   		 	            <img class="center" src="img/product/Product7.jpg" alt="" width="200" height="400">
-    			        <p>14 Inch Samsung Flex 360 Pro WHQD+ resolution, I9 32 gb Ram</p>
-    			        <p class="card-product__price">$1250.00</p>
-  			        </div>
-		        </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card text-center card-product">
-                  <div class="card-product__img">
-                    <img class="card-img" src="img/product/Product8.jpg" alt="" width="100" height="100">
-                    <ul class="card-product__imgOverlay">
-                      <li><button class="modal-button" href="#myModal8"><i class="ti-search"></i></button></li>
-                      <li><button><i class="ti-shopping-cart"></i></button></li>
-                      <li><button><i class="ti-heart"></i></button></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <p>Electronics</p>
-                    <h4 class="card-product__title"><a href="#">Samsung Flex S 14</a></h4>
-                    <p class="card-product__price">$750.00</p>
-                  </div>
-                </div>
-                <!-- The Modal -->
-		        <div id="myModal8" class="modal">
-  		            <!-- Modal content -->
-  			        <div class="modal-content">
-    			        <span class="close">&times;</span>
-   		 	            <img class="center" src="img/product/Product8.jpg" alt="" width="200" height="400">
-    			        <p>14 Inch Samsung Flex 360 Laptop I7</p>
-    			        <p class="card-product__price">$750.00</p>
-  			        </div>
-		        </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card text-center card-product">
-                  <div class="card-product__img">
-                    <img class="card-img" src="img/product/Product9.png" alt="" width="100" height="100">
-                    <ul class="card-product__imgOverlay">
-                      <li><button class="modal-button" href="#myModal9"><i class="ti-search"></i></button></li>
-                      <li><button><i class="ti-shopping-cart"></i></button></li>
-                      <li><button><i class="ti-heart"></i></button></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <p>Electronics</p>
-                    <h4 class="card-product__title"><a href="#">Asus E676 14</a></h4>
-                    <p class="card-product__price">$550.00</p>
-                  </div>
-                </div>
-                <!-- The Modal -->
-		        <div id="myModal9" class="modal">
-  		            <!-- Modal content -->
-  			        <div class="modal-content">
-    			        <span class="close">&times;</span>
-   		 	            <img class="center" src="img/product/Product9.png" alt="" width="200" height="400">
-    			        <p>14 Inch Asus E676. New 2022 Model Ryzen 6700</p>
-    			        <p class="card-product__price">$550.00</p>
-  			        </div>
-		        </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card text-center card-product">
-                  <div class="card-product__img">
-                    <img class="card-img" src="img/product/Product10.png" alt="" width="100" height="100">
-                    <ul class="card-product__imgOverlay">
-                      <li><button class="modal-button" href="#myModal10"><i class="ti-search"></i></button></li>
-                      <li><button><i class="ti-shopping-cart"></i></button></li>
-                      <li><button><i class="ti-heart"></i></button></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <p>Electronics</p>
-                    <h4 class="card-product__title"><a href="#">Asus W654 15</a></h4>
-                    <p class="card-product__price">$750.00</p>
-                  </div>
-                </div>
-                <!-- The Modal -->
-		        <div id="myModal10" class="modal">
-  		            <!-- Modal content -->
-  			        <div class="modal-content">
-    			        <span class="close">&times;</span>
-   		 	            <img class="center" src="img/product/Product10.png" alt="" width="200" height="400">
-    			        <p>15 Inch Asus Computer. Ryzen 5 8 gb 256 gb</p>
-    			        <p class="card-product__price">$750.00</p>
-  			        </div>
-		        </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card text-center card-product">
-                  <div class="card-product__img">
-                    <img class="card-img" src="img/product/Product11.png" alt="" width="100" height="100">
-                    <ul class="card-product__imgOverlay">
-                      <li><button class="modal-button" href="#myModal11"><i class="ti-search"></i></button></li>
-                      <li><button><i class="ti-shopping-cart"></i></button></li>
-                      <li><button><i class="ti-heart"></i></button></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <p>Electronics</p>
-                    <h4 class="card-product__title"><a href="#">Surface Laptop 14</a></h4>
-                    <p class="card-product__price">$1250.00</p>
-                  </div>
-                </div>
-                <!-- The Modal -->
-		        <div id="myModal11" class="modal">
-  		            <!-- Modal content -->
-  			        <div class="modal-content">
-    			        <span class="close">&times;</span>
-   		 	            <img class="center" src="img/product/Product11.png" alt="" width="200" height="400">
-    			        <p>14 Inch Suurface Laptop by Microsoft. Mouse not included.</p>
-    			        <p class="card-product__price">$1250.00</p>
-  			        </div>
-		        </div>
-              </div>
-              <div class="col-md-6 col-lg-4">
-                <div class="card text-center card-product">
-                  <div class="card-product__img">
-                    <img class="card-img" src="img/product/Product12.png" alt="" width="100" height="100">
-                    <ul class="card-product__imgOverlay">
-                      <li><button class="modal-button" href="#myModal12"><i class="ti-search"></i></button></li>
-                      <li><button><i class="ti-shopping-cart"></i></button></li>
-                      <li><button><i class="ti-heart"></i></button></li>
-                    </ul>
-                  </div>
-                  <div class="card-body">
-                    <p>Electronics</p>
-                    <h4 class="card-product__title"><a href="#">Surface Pro 14</a></h4>
-                    <p class="card-product__price">$1250.00</p>
-                  </div>
-                </div>
-                <!-- The Modal -->
-		        <div id="myModal12" class="modal">
-  		            <!-- Modal content -->
-  			        <div class="modal-content">
-    			        <span class="close">&times;</span>
-   		 	            <img class="center" src="img/product/Product12.png" alt="" width="200" height="400">
-    			        <p>14 Inch Microsoft Suface Pro. Intel I9  16gb ram 512 Gb</p>
-    			        <p class="card-product__price">$1250.00</p>
-  			        </div>
-		        </div>
               </div>
             </div>
-          </section>
-          <!-- End Best Seller -->
-        </div>
+            <div class="card-body">
+              <p>Electronics</p>
+              <h4 class="card-product__title"><a href="#">{{$product->name}}</a></h4>
+              <p class="card-product__price">${{$product->regular_price}}</p>
+            </div>
+            <!-- The Modal -->
+            <div id="myModal1" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <img class="center" src="{{ asset('/img/products')}}/{{$product->image}}" alt="" width="200" height="400">
+                <p>{{$product->description}}</p>
+                <p class="card-product__price">${{$product->regular_price}}</p>
+              </div>
+            </div>
+            @endforeach
+          </div>
+        </section>
+ 
+        <!-- End Best Seller -->
       </div>
     </div>
-  </section>
-  <!-- ================ category section end ================= -->
+  </div>
+</section>
+<!-- ================ category section end ================= -->
 
 
-  <!-- ================ Subscribe section start ================= -->
-  <section class="subscribe-position">
-    <div class="container">
-      <div class="subscribe text-center">
-        <h3 class="subscribe__title">Get Update From Anywhere</h3>
-        <p>Bearing Void gathering light light his eavening unto dont afraid</p>
-        <div id="mc_embed_signup">
-          <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe-form form-inline mt-5 pt-1">
-            <div class="form-group ml-sm-auto">
-              <input class="form-control mb-1" type="email" name="EMAIL" placeholder="Enter your email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '">
-              <div class="info"></div>
-            </div>
-            <button class="button button-subscribe mr-auto mb-1" type="submit">Subscribe Now</button>
-            <div style="position: absolute; left: -5000px;">
-              <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-            </div>
+<!-- ================ Subscribe section start ================= -->
+<section class="subscribe-position">
+  <div class="container">
+    <div class="subscribe text-center">
+      <h3 class="subscribe__title">Get Update From Anywhere</h3>
+      <p>Bearing Void gathering light light his eavening unto dont afraid</p>
+      <div id="mc_embed_signup">
+        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe-form form-inline mt-5 pt-1">
+          <div class="form-group ml-sm-auto">
+            <input class="form-control mb-1" type="email" name="EMAIL" placeholder="Enter your email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '">
+            <div class="info"></div>
+          </div>
+          <button class="button button-subscribe mr-auto mb-1" type="submit">Subscribe Now</button>
+          <div style="position: absolute; left: -5000px;">
+            <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+          </div>
 
-          </form>
-        </div>
-
+        </form>
       </div>
+
     </div>
-  </section>
-  <!-- ================ Subscribe section end ================= -->
+  </div>
+</section>
+<!-- ================ Subscribe section end ================= -->
 
 <!--================ Navbar start =================-->
 @include('layouts.footer')
 <!--================ Navbar end =================-->
 
-  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
-  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="vendors/skrollr.min.js"></script>
-  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-  <script src="vendors/nice-select/jquery.nice-select.min.js"></script>
-  <script src="vendors/nouislider/nouislider.min.js"></script>
-  <script src="vendors/jquery.ajaxchimp.min.js"></script>
-  <script src="vendors/mail-script.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/addedjs.js"></script>
-  </body>
+<script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+<script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="vendors/skrollr.min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="vendors/nice-select/jquery.nice-select.min.js"></script>
+<script src="vendors/nouislider/nouislider.min.js"></script>
+<script src="vendors/jquery.ajaxchimp.min.js"></script>
+<script src="vendors/mail-script.js"></script>
+<script src="js/main.js"></script>
+<script src="js/addedjs.js"></script>
+</body>
 
-  </html>
+</html>
 
 </body>
+
 </html>
