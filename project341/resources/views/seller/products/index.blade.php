@@ -60,8 +60,13 @@
                                             {{ $product->price }}
                                         </td>
                                         <td>
+                                            <form class="inline-block" action="{{ route('seller.products.edit', $product->id) }}" method="get">
+                                                <input type="hidden" name="_method" value="Edit">
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                <input type="submit" class="text-red-600 hover:text-red-900 mb-2 mr-2" value="Edit">
+                                            </form>
                                             <form class="inline-block" action="{{ route('seller.products.destroy', $product->id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
-                                                <a href="{{ route('seller.products.edit', $product->id) }}" class="text-indigo-600 hover:text-indigo-900 mb-2 mr-2" style="margin-left:60px">Edit</a>
+
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <input type="submit" class="text-red-600 hover:text-red-900 mb-2 mr-2" value="Delete">

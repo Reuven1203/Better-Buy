@@ -62,7 +62,8 @@ class ProductController extends Controller
      */
     public function edit(Product $products)
     {
-        return view('seller.products.edit', compact('products'));
+        $id = Product::find('id');
+        return view('seller.products.edit', compact('id'));
     }
 
     /**
@@ -74,8 +75,8 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $products)
     {
-        $products->update($request->validated());
-        return redirect()->route('seller.products.index');
+        // $products->update($request->validated());
+        // return redirect()->route('seller.products.index');
     }
 
     /**
