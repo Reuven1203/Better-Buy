@@ -28,7 +28,8 @@ class ProductController extends Controller
     public function create()
     {
         // DB::insert('insert into products (price,name,image,brand,stock) values (?,?,?,?,?)', [8, 'mac', 'p', 'apple', 6]);
-        return view('seller.products.create');
+        $products = Product::all();
+        return view('seller.products.create', compact('products'));
     }
 
     /**
@@ -60,10 +61,10 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $products)
+    public function edit($id)
     {
-        $id = Product::find('id');
-        return view('seller.products.edit', compact('id'));
+        $product = Product::find($id);
+        return view('seller.products.edit', compact('product'));
     }
 
     /**
@@ -73,10 +74,17 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $products)
+    public function update(Request $request, $id)
     {
-        // $products->update($request->validated());
-        // return redirect()->route('seller.products.index');
+        $product = Product::find($id);
+        $product->name = $request->input('name');
+        $product->brand = $request->input('brand');
+        $product->price = $request->input('price');
+        $product->stock = $request->input('stock');
+        // $product->image = $request->input('image');
+        $product->update();
+
+        return redirect()->route('seller.products.index');
     }
 
     /**

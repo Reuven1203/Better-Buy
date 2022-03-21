@@ -1,3 +1,11 @@
+<?php
+
+use Illuminate\Support\Facades\DB;
+
+$products = DB::select('select * from products');
+
+use App\Http\Controllers\Admin\ProductController;
+?>
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -63,7 +71,7 @@
                                             <form class="inline-block" action="{{ route('seller.products.edit', $product->id) }}" method="get">
                                                 <input type="hidden" name="_method" value="Edit">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <input type="submit" class="text-red-600 hover:text-red-900 mb-2 mr-2" value="Edit">
+                                                <a><input type="submit" class="text-blue-600 hover:text-red-900 mb-2 mr-2" value="Edit"></a>
                                             </form>
                                             <form class="inline-block" action="{{ route('seller.products.destroy', $product->id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
 
