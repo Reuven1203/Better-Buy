@@ -108,7 +108,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <img class="card-img" src="img/product/phones/Phone1.jpeg" alt="" width="100" height="150">
+                                      <img class="card-img" src="img/products/product13.jpg" alt="" width="100" height="150">
                                       <ul class="card-product__imgOverlay">
                                           <li><button><i class="ti-search"></i></button></li>
                                           <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -125,7 +125,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <img class="card-img" src="img/product/phones/Phone2.jpeg" alt="" width="100" height="150">
+                                      <img class="card-img" src="img/products/product14.jpg" alt="" width="100" height="150">
                                       <ul class="card-product__imgOverlay">
                                           <li><button><i class="ti-search"></i></button></li>
                                           <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -142,7 +142,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <img class="card-img" src="img/product/phones/Phone3.jpeg" alt="" width="100" height="150">
+                                      <img class="card-img" src="img/products/product15.jpg" alt="" width="100" height="150">
                                       <ul class="card-product__imgOverlay">
                                           <li><button><i class="ti-search"></i></button></li>
                                           <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -159,7 +159,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <img class="card-img" src="img/product/phones/Phone4.jpeg" alt="" width="100" height="150">
+                                      <img class="card-img" src="img/products/product16.jpg" alt="" width="100" height="150">
                                       <ul class="card-product__imgOverlay">
                                           <li><button><i class="ti-search"></i></button></li>
                                           <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -176,7 +176,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <img class="card-img" src="img/product/phones/Phone5.jpeg" alt="" width="100" height="150">
+                                      <img class="card-img" src="img/products/product17.jpg" alt="" width="100" height="150">
                                       <ul class="card-product__imgOverlay">
                                           <li><button><i class="ti-search"></i></button></li>
                                           <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -193,7 +193,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <img class="card-img" src="img/product/phones/Phone6.jpeg" alt="" width="100" height="150">
+                                      <img class="card-img" src="img/products/product18.jpg" alt="" width="100" height="150">
                                       <ul class="card-product__imgOverlay">
                                           <li><button><i class="ti-search"></i></button></li>
                                           <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -210,7 +210,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <img class="card-img" src="img/product/phones/Phone7.jpeg" alt="" width="100" height="150">
+                                      <img class="card-img" src="img/products/product19.jpg" alt="" width="100" height="150">
                                       <ul class="card-product__imgOverlay">
                                           <li><button><i class="ti-search"></i></button></li>
                                           <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -227,7 +227,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <img class="card-img" src="img/products/product8.jpg" alt="" width="100" height="150">
+                                      <img class="card-img" src="img/products/product20.jpg" alt="" width="100" height="150">
                                       <ul class="card-product__imgOverlay">
                                           <li><button><i class="ti-search"></i></button></li>
                                           <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -244,7 +244,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <img class="card-img" src="img/product/phones/Phone9.jpeg" alt="" width="100" height="150">
+                                      <img class="card-img" src="img/products/product21.jpg" alt="" width="100" height="150">
                                       <ul class="card-product__imgOverlay">
                                           <li><button><i class="ti-search"></i></button></li>
                                           <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -261,7 +261,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <img class="card-img" src="img/product/phones/Phone10.jpeg" alt="" width="100" height="150">
+                                      <img class="card-img" src="img/products/product22.jpg" alt="" width="100" height="150">
                                       <ul class="card-product__imgOverlay">
                                           <li><button><i class="ti-search"></i></button></li>
                                           <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -278,7 +278,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <img class="card-img" src="img/product/phones/Phone11.jpeg" alt="" width="100" height="150">
+                                      <img class="card-img" src="img/products/product23.jpg" alt="" width="100" height="150">
                                       <ul class="card-product__imgOverlay">
                                           <li><button><i class="ti-search"></i></button></li>
                                           <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -295,7 +295,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <img class="card-img" src="img/product/phones/Phone12.jpeg" alt="" width="100" height="150">
+                                      <img class="card-img" src="img/products/product24.jpg" alt="" width="100" height="150">
                                       <ul class="card-product__imgOverlay">
                                           <li><button><i class="ti-search"></i></button></li>
                                           <li><button><i class="ti-shopping-cart"></i></button></li>
