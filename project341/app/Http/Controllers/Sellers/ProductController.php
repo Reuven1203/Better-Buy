@@ -39,7 +39,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        DB::insert('insert into products (name,brand,price,image,stock) values (?,?,?,?,?)', [$_POST['name'], $_POST['brand'], $_POST['price'], $_POST['image'], $_POST['stock']]);
+        DB::insert('insert into products (name,brand,price,image,stock,category) values (?,?,?,?,?,?)', [$_POST['name'], $_POST['brand'], $_POST['price'], $_POST['image'], $_POST['stock'], $_POST['category']]);
         return view('seller.products.index');
     }
 
@@ -80,6 +80,7 @@ class ProductController extends Controller
         $product->brand = $request->input('brand');
         $product->price = $request->input('price');
         $product->stock = $request->input('stock');
+        $product->category = $request->input('category');
         // $product->image = $request->input('image');
         $product->update();
 

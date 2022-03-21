@@ -45,6 +45,17 @@ use App\Http\Controllers\Admin\ProductController;
                                 <label for="stock" class="block font-medium text-sm text-gray-700">Available Stock</label>
                                 <input type="number" name="stock" id="stock" class="form-input rounded-md shadow-sm mt-1 block w-full" value=<?php echo $product->stock; ?> />
                             </div>
+                            <div class="px-4 py-5 bg-white sm:p-6">
+                                <x-jet-label for="category" value="category" />
+                                <select name="category" x-model="category" class="px-4 py-5 bg-white sm:p-6" value=<?php echo $product->category; ?>>
+                                    <option value="Laptops">Laptops</option>
+                                    <option value="Phones">Phones</option>
+                                    <option value="TV/Monitor">TV/Monitor</option>
+                                    <option value="Tablets">Tablets</option>
+
+
+                                </select>
+                            </div>
 
                             <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
                                 <input type="submit" value="Edit" class="inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray disabled:opacity-25 transition ease-in-out duration-150">
