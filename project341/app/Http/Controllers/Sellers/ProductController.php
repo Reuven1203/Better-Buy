@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Sellers;
 
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
@@ -14,7 +16,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('seller.products.index');
+        $products = Product::all();
+        return view('seller.products.index', compact('products'));
     }
 
     /**
@@ -24,7 +27,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        // DB::insert('insert into products (price,name,image,brand,stock) values (?,?,?,?,?)', [8, 'mac', 'p', 'apple', 6]);
+        $products = Product::all();
+        return view('seller.products.create', compact('products'));
     }
 
     /**
@@ -35,7 +40,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::insert('insert into products (name,brand,price,image,stock) values (?,?,?,?,?)', [$_POST['name'], $_POST['brand'], $_POST['price'], $_POST['image'], $_POST['stock']]);
+        return view('seller.products.index');
     }
 
     /**
@@ -57,7 +63,8 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::find($id);
+        return view('seller.products.edit', compact('product'));
     }
 
     /**
@@ -69,7 +76,15 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = Product::find($id);
+        $product->name = $request->input('name');
+        $product->brand = $request->input('brand');
+        $product->price = $request->input('price');
+        $product->stock = $request->input('stock');
+        // $product->image = $request->input('image');
+        $product->update();
+
+        return redirect()->route('seller.products.index');
     }
 
     /**
@@ -78,8 +93,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return redirect()->route('seller.products.index');
     }
 }

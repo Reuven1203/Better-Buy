@@ -1,13 +1,3 @@
-<?php
-
-use Illuminate\Support\Facades\DB;
-
-$users = DB::select('select * from users');
-
-use App\Http\Controllers\Admin\UserController;
-?>
-
-
 <x-app-layout>
 
     <x-slot name="header">
@@ -17,11 +7,12 @@ use App\Http\Controllers\Admin\UserController;
     </x-slot>
 
     <div>
-        <!-- @if (auth()->user()->role_id != "Admin") -->
+        @if (auth()->user()->role_id != "Admin")
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
             Accessible only for Admins.
         </div>
-        <!-- @endif -->
+        @endif
+        @if (auth()->user()->role_id == "Admin")
         <table class="min-w-full divide-y divide-gray-200 w-full">
             <thead>
                 <tr>
@@ -61,15 +52,20 @@ use App\Http\Controllers\Admin\UserController;
                         {{$user -> role_id}}
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                        <a href="{{ route('admin.users.edit', $user->id) }}" class="text-indigo-600 hover:text-indigo-900 mb-2 mr-2">Edit</a>
+                        <form class="inline-block" action="{{ route('admin.users.edit', $user->id) }}" method="get">
+                            <input type="hidden" name="_method" value="Edit">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <a><input type="submit" class="text-indigo-600 hover:text-red-900 mb-2 mr-2" style="margin-left:60px" value="Edit"></a>
+                        </form>
                         <form class="inline-block" action="{{ route('admin.users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
                             <input type="hidden" name="_method" value="DELETE">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <input type="submit" class="text-red-600 hover:text-red-900 mb-2 mr-2" value="Delete">
+                            <input type="submit" class="text-red-600 hover:text-red-900 mb-2 mr-2" style="margin-left:60px" value="Delete">
                         </form>
                     </td>
                     @endforeach
             </tbody>
         </table>
+        @endif
     </div>
 </x-app-layout>
