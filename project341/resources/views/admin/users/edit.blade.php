@@ -36,9 +36,10 @@ use App\Http\Controllers\Admin\UserController;
                             <div class="px-4 py-5 bg-white sm:p-6">
                                 <x-jet-label for="role_id" value="{{ __('Register as:') }}" />
                                 <select name="role_id" x-model="role_id" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm" value=<?php echo $user->role_id; ?>>
+                                    <option value="Admin">Admin</option>
                                     <option value="Client">Client</option>
                                     <option value="Seller">Seller</option>
-                                    <option value="Admin">Admin</option>
+
                                 </select>
                             </div>
 
