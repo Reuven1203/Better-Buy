@@ -7,11 +7,12 @@
     </x-slot>
 
     <div>
-        <!-- @if (auth()->user()->role_id != "Admin") -->
+        @if (auth()->user()->role_id != "Admin")
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
             Accessible only for Admins.
         </div>
-        <!-- @endif -->
+        @endif
+        @if (auth()->user()->role_id == "Admin")
         <table class="min-w-full divide-y divide-gray-200 w-full">
             <thead>
                 <tr>
@@ -65,5 +66,6 @@
                     @endforeach
             </tbody>
         </table>
+        @endif
     </div>
 </x-app-layout>
