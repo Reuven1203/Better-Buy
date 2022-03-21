@@ -1,13 +1,3 @@
-<?php
-
-use Illuminate\Support\Facades\DB;
-
-$users = DB::select('select * from users');
-
-use App\Http\Controllers\Admin\UserController;
-?>
-
-
 <x-app-layout>
 
     <x-slot name="header">

@@ -38,11 +38,8 @@ use App\Http\Controllers\Admin\ProductController;
                                         <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             Stock
                                         </th>
-                                        <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                            Image
-                                        </th>
                                         <th scope="col" width="200" class="px-6 py-3 bg-gray-50">
-
+                                            Price
                                         </th>
                                     </tr>
                                 </thead>
@@ -66,16 +63,9 @@ use App\Http\Controllers\Admin\ProductController;
                                         </td>
 
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{ $product->image }}
+                                            {{ $product->price }}
                                         </td>
 
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                            <form class="inline-block" action="{{ route('products.destroy', $product->id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
-                                                <input type="hidden" name="_method" value="DELETE">
-                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <input type="submit" class="text-red-600 hover:text-red-900 mb-2 mr-2" value="Delete">
-                                            </form>
-                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>

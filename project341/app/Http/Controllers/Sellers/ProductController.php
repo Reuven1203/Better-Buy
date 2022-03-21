@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Sellers;
 
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use app\Models\Product;
 
 class ProductController extends Controller
 {
@@ -14,6 +16,7 @@ class ProductController extends Controller
      */
     public function index()
     {
+
         return view('seller.products.index');
     }
 
@@ -24,6 +27,7 @@ class ProductController extends Controller
      */
     public function create()
     {
+        // DB::insert('insert into products (price,name,image,brand,stock) values (?,?,?,?,?)', [8, 'mac', 'p', 'apple', 6]);
         return view('seller.products.create');
     }
 
@@ -35,7 +39,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        DB::insert('insert into products (name,brand,price,image,stock) values (?,?,?,?,?)', [$_POST['name'], $_POST['brand'], $_POST['price'], $_POST['image'], $_POST['stock']]);
+        return view('seller.products.index');
     }
 
     /**

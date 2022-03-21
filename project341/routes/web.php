@@ -37,16 +37,16 @@ Route::get('categories_phone', function () {
     return view('categories_phone');
 });
 
-Route::group(['middleware' => 'auth'], function() {
-    Route::group(['middleware' => 'role:client', 'prefix' => 'client', 'as' => 'client.'], function() {
+Route::post('create', [ProductController::class, 'store']);
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::group(['middleware' => 'role:client', 'prefix' => 'client', 'as' => 'client.'], function () {
         Route::resource('orders', \App\Http\Controllers\Clients\OrderController::class);
     });
-   Route::group(['middleware' => 'role:seller', 'prefix' => 'seller', 'as' => 'seller.'], function() {
-       Route::resource('products', \App\Http\Controllers\Sellers\ProductController::class);
-   });
-    Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function() {
+    Route::group(['middleware' => 'role:seller', 'prefix' => 'seller', 'as' => 'seller.'], function () {
+        Route::resource('products', \App\Http\Controllers\Sellers\ProductController::class);
+    });
+    Route::group(['middleware' => 'role:admin', 'prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
     });
-
-
 });
