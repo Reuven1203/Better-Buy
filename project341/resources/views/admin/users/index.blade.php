@@ -51,7 +51,11 @@
                         {{$user -> role_id}}
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                        <a href="{{ route('admin.users.edit', $user->id) }}" class="text-indigo-600 hover:text-indigo-900 mb-2 mr-2">Edit</a>
+                        <form class="inline-block" action="{{ route('admin.users.edit', $user->id) }}" method="get">
+                            <input type="hidden" name="_method" value="Edit">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <a><input type="submit" class="text-blue-600 hover:text-red-900 mb-2 mr-2" value="Edit"></a>
+                        </form>
                         <form class="inline-block" action="{{ route('admin.users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Are you sure?');">
                             <input type="hidden" name="_method" value="DELETE">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
