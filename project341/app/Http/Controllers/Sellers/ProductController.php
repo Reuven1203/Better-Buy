@@ -16,8 +16,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-
-        return view('seller.products.index');
+        $products = Product::all();
+        return view('seller.products.index', compact('products'));
     }
 
     /**
@@ -60,9 +60,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $products)
     {
-        //
+        return view('seller.products.edit', compact('products'));
     }
 
     /**
@@ -72,9 +72,10 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $products)
     {
-        //
+        $products->update($request->validated());
+        return redirect()->route('seller.products.index');
     }
 
     /**
