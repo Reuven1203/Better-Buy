@@ -28,8 +28,7 @@ class ProductController extends Controller
     public function create()
     {
         // DB::insert('insert into products (price,name,image,brand,stock) values (?,?,?,?,?)', [8, 'mac', 'p', 'apple', 6]);
-        $products = Product::all();
-        return view('seller.products.create', compact('products'));
+        return view('seller.products.create');
     }
 
     /**
