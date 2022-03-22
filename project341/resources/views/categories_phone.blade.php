@@ -106,7 +106,44 @@
                   @if (empty(DB::table('products')->count()))
                   @livewire('phone')
                   @endif
+                  <section class="lattest-product-area pb-40 category-list">
+                    <div class="row">
+                    <?php 
+                     use Illuminate\Support\Facades\DB;
+                    $products = DB::table('products')->where('category', 'Phones')->get();
+                    $A=0;
+                    foreach ($products as $product) {
+                        $A++;
+                        ?>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card text-center card-product">
+                             <div class="card-product__img">
+                                <img class="card-img" src="img/product/<?php echo $product->image; ?>" alt="" width="100" height="100">
+                                    <ul class="card-product__imgOverlay">
+                                    <li><button class="modal-button" href="#myModal<?php echo $A; ?>"><i class="ti-search"></i></button></li>
+                                    <li><button><i class="ti-shopping-cart"></i></button></li>
+                                    <li><button><i class="ti-heart"></i></button></li>
+                                    </ul>
+                        </div>
+                    <div class="card-body">
+                    <p>Electronics</p>
+                    <h4 class="card-product__title"><a href="#"><?php echo $product->name; ?></a></h4>
+                    <p class="card-product__price"><?php echo $product->price; ?>$</p>
+                </div>
+            </div>
+            <!-- The Modal -->
+            <div id="myModal<?php echo $A; ?>" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img class="center" src="img/product/<?php echo $product->image; ?>" alt="" width="200" height="400">
+                    <p><?php echo $product->brand; ?> Newest Smartphone from 2022</p>
+                    <p class="card-product__price"><?php echo $product->price; ?>$</p>
+                </div>
+            </div>
+        </div>
                   <!-- End Best Seller -->
+                  <?php } ?>
               </div>
           </div>
       </div>
