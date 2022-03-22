@@ -99,14 +99,31 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $product = Product::find($id);
-        $product->name = $request->input('name');
-        $product->brand = $request->input('brand');
-        $product->price = $request->input('price');
-        $product->stock = $request->input('stock');
-        $product->category = $request->input('category');
-        // $product->image = $request->input('image');
-        $product->update();
+        $data = request()->validate([
+            'name' => 'required',
+            'brand' => 'required',
+            'price' => 'required',
+            'stock' => 'required',
+            'category' => 'required',
+        ]);
+        if (request('image') == null) {
+            $imagePath = Product::find($id)->image;
+        } else {
+            $imagePath = request('image')->store('uploads', 'public');
+        }
+
+        Product::find($id)->update([
+            'name' => $data['name'],
+            'brand' => $data['brand'],
+            'price' => $data['price'],
+            'image' => $imagePath,
+            'stock' => $data['stock'],
+            'category' => $data['category'],
+
+        ]);
+
+        $user = auth()->user();
+        return view('seller.products.index', compact('user'));
 
         return redirect()->route('seller.products.index');
     }
