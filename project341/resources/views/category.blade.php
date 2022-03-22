@@ -81,7 +81,7 @@
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
                                       <a href="categories_phone">
-                                          <img class="card-img" src="img/product/Product12.png" alt="" width="100" height="100">
+                                          <img class="card-img" src="img/product/Product13.jpg" alt="" width="100" height="100">
                                           <ul class="card-product__imgOverlay">
                                               <li><button><i class="ti-eye"></i></button></li>
                                           </ul>
