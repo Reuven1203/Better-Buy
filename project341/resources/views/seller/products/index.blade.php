@@ -1,11 +1,3 @@
-<?php
-
-use Illuminate\Support\Facades\DB;
-
-$products = DB::select('select * from products');
-
-use App\Http\Controllers\Admin\ProductController;
-?>
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -49,7 +41,7 @@ use App\Http\Controllers\Admin\ProductController;
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
-                                    @foreach ($products as $product)
+                                    @foreach ($user->products as $product)
                                     <tr>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                             {{ $product->id }}

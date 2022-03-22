@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\User;
 
 class ProductController extends Controller
 {
@@ -16,8 +17,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        return view('seller.products.index', compact('products'));
+        $user = auth()->user();
+        return view('seller.products.index', compact('user'));
     }
 
     /**
@@ -39,8 +40,19 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        DB::insert('insert into products (name,brand,price,image,stock,category) values (?,?,?,?,?,?)', [$_POST['name'], $_POST['brand'], $_POST['price'], $_POST['image'], $_POST['stock'], $_POST['category']]);
-        return view('seller.products.index');
+        $data = request()->validate([
+            'name' => 'required',
+            'brand' => 'required',
+            'price' => 'required',
+            'image' => 'required',
+            'stock' => 'required',
+            'category' => 'required',
+        ]);
+        $imagePath = request('image')->store('uploads', 'public');
+        auth()->user()->products()->create($data);
+
+        $user = auth()->user();
+        return view('seller.products.index', compact('user'));
     }
 
     /**
