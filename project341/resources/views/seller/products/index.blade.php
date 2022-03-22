@@ -23,6 +23,11 @@ $allProducts = Product::all();
                             <table class="min-w-full divide-y divide-gray-200 w-full">
                                 <thead>
                                     <tr>
+                                        @if(auth()->user()->role_id == "Admin")
+                                        <th scope="col" width="50" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            User ID
+                                        </th>
+                                        @endif
                                         <th scope="col" width="50" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                             ID
                                         </th>
@@ -95,6 +100,9 @@ $allProducts = Product::all();
                                     @foreach ($allProducts as $product)
 
                                     <tr>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                            {{ $product->user_id }}
+                                        </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                             {{ $product->id }}
                                         </td>
