@@ -44,12 +44,24 @@ class ProductController extends Controller
             'name' => 'required',
             'brand' => 'required',
             'price' => 'required',
-            'image' => 'required',
             'stock' => 'required',
             'category' => 'required',
         ]);
-        $imagePath = request('image')->store('uploads', 'public');
-        auth()->user()->products()->create($data);
+        if (request('image') != null) {
+            $imagePath = request('image')->store('uploads', 'public');
+        } else {
+            $imagePath = '/uploads/BetterBuy_logo2.png';
+        }
+
+        auth()->user()->products()->create([
+            'name' => $data['name'],
+            'brand' => $data['brand'],
+            'price' => $data['price'],
+            'image' => $imagePath,
+            'stock' => $data['stock'],
+            'category' => $data['category'],
+
+        ]);
 
         $user = auth()->user();
         return view('seller.products.index', compact('user'));
