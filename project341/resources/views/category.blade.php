@@ -96,22 +96,7 @@
                           <div class="col-md-6 col-lg-4">
                               <div class="card text-center card-product">
                                   <div class="card-product__img">
-                                      <a href="categories_phone">
-                                          <img class="card-img" src="img/product/product25.jpg" alt="" width="100" height="100">
-                                          <ul class="card-product__imgOverlay">
-                                              <li><button><i class="ti-eye"></i></button></li>
-                                          </ul>
-                                      </a>
-                                  </div>
-                                  <div class="card-body">
-                                      <p>Electronics</p>
-                                      <h4 class="card-product__title"><a href="categories_phone">Tablets</a></h4>
-                                  </div>
-                              </div>
-                          </div> <div class="col-md-6 col-lg-4">
-                              <div class="card text-center card-product">
-                                  <div class="card-product__img">
-                                      <a href="categories_phone">
+                                      <a href="categories_tv">
                                           <img class="card-img" src="img/product/product37.jpg" alt="" width="100" height="100">
                                           <ul class="card-product__imgOverlay">
                                               <li><button><i class="ti-eye"></i></button></li>
@@ -120,7 +105,23 @@
                                   </div>
                                   <div class="card-body">
                                       <p>Electronics</p>
-                                      <h4 class="card-product__title"><a href="categories_phone">TV's</a></h4>
+                                      <h4 class="card-product__title"><a href="categories_tv">TV's</a></h4>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6 col-lg-4">
+                              <div class="card text-center card-product">
+                                  <div class="card-product__img">
+                                      <a href="categories_tablet">
+                                          <img class="card-img" src="img/product/product25.jpg" alt="" width="100" height="100">
+                                          <ul class="card-product__imgOverlay">
+                                              <li><button><i class="ti-eye"></i></button></li>
+                                          </ul>
+                                      </a>
+                                  </div>
+                                  <div class="card-body">
+                                      <p>Electronics</p>
+                                      <h4 class="card-product__title"><a href="categories_tablet">Tablets</a></h4>
                                   </div>
                               </div>
                           </div>
