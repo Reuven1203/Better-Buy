@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\DB;
 
-$products = DB::select('select * from products');
+
 
 use App\Http\Controllers\Admin\ProductController;
 ?>
@@ -16,7 +16,7 @@ use App\Http\Controllers\Admin\ProductController;
     <div>
         <div class="max-w-4xl mx-auto py-10 sm:px-6 lg:px-8">
             <div class="mt-5 md:mt-0 md:col-span-2">
-                <form method="post" action="{{ route('seller.products.store') }}">
+                <form method="post" action="{{ route('seller.products.store') }}" enctype="multipart/form-data">
 
                     <div class="shadow overflow-hidden sm:rounded-md">
                         <div class="px-4 py-5 bg-white sm:p-6">
@@ -37,7 +37,7 @@ use App\Http\Controllers\Admin\ProductController;
                         </div>
                         <div class="px-4 py-5 bg-white sm:p-6">
                             <label for="image" class="block font-medium text-sm text-gray-700">Image</label>
-                            <input type="file" name="image" id="image" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('image', '') }}" />
+                            <input type="file" accept="image/png, image/jpeg" name="image" id="image" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('image', '') }}" />
                         </div>
                         <div class="px-4 py-5 bg-white sm:p-6">
                             <label for="stock" class="block font-medium text-sm text-gray-700">Available Stock</label>
