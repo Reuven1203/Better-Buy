@@ -57,10 +57,12 @@ $allProducts = Product::all();
                                 <tbody class="bg-white divide-y divide-gray-200">
                                     @if (auth()->user()->role_id != "Admin" && auth()->user()->role_id == "Seller")
                                     @foreach ($user->products as $product)
-
                                     <tr>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                             {{ $product->id }}
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                                            <img src="/storage/{{$product->image}}" alt="">
                                         </td>
 
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
@@ -97,6 +99,7 @@ $allProducts = Product::all();
 
 
                                     </tr>
+
                                     @endforeach
                                     @endif
                                     @if(auth()->user()->role_id == 'Admin')
