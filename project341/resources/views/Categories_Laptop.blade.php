@@ -119,7 +119,7 @@
               <div class="col-md-6 col-lg-4">
                 <div class="card text-center card-product">
                   <div class="card-product__img">
-                    <img class="card-img" src="/storage/{{$product->image}}" alt="" width="100" height="100">
+                    <img class="card-img" src="img/product/<?php echo $product->image; ?>" alt="" width="100" height="100">
                     <ul class="card-product__imgOverlay">
                       <li><button class="modal-button" href="#myModal<?php echo $A; ?>"><i class="ti-search"></i></button></li>
                       <li><button><i class="ti-shopping-cart"></i></button></li>
