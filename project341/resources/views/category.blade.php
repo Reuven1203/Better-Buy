@@ -105,7 +105,7 @@
                                   </div>
                                   <div class="card-body">
                                       <p>Electronics</p>
-                                      <h4 class="card-product__title"><a href="categories_tv">TV's</a></h4>
+                                      <h4 class="card-product__title"><a href="categories_tv">TV's/Monitors</a></h4>
                                   </div>
                               </div>
                           </div>
