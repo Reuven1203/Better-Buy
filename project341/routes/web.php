@@ -45,6 +45,10 @@ Route::get('categories_tablet', function () {
     return view('categories_tablet');
 });
 
+Route::get('cart', function (){
+    return view('cart');
+});
+
 Route::post('create', [ProductController::class, 'store']);
 
 Route::group(['middleware' => 'auth'], function () {
