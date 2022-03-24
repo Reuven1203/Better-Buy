@@ -37,6 +37,14 @@ Route::get('categories_phone', function () {
     return view('categories_phone');
 });
 
+Route::get('categories_tv', function () {
+    return view('categories_tv');
+});
+
+Route::get('categories_tablet', function () {
+    return view('categories_tablet');
+});
+
 Route::post('create', [ProductController::class, 'store']);
 
 Route::group(['middleware' => 'auth'], function () {
