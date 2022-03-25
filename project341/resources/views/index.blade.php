@@ -63,7 +63,51 @@
       <div class="section-intro pb-60px">
         <h2>Sponsored <span class="section-intro__style">Products</span></h2>
       </div>
-      <div class="owl-carousel owl-theme" id="bestSellerCarousel">
+
+          <div class="col-md-6 col-lg-4">
+          <?php
+              use Illuminate\Support\Facades\DB;
+
+              $products = DB::table('products')->where('category', 'SponsoredProduct')->get();
+              $A = 0;
+              foreach ($products as $product) {
+                $A++;
+              ?>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="card text-center card-product">
+                
+                    <div class="card text-center card-product">
+                      <div class="card-product__img">
+                        <img class="card-img" src="/storage/{{$product->image}}" alt="" width="100" height="100">
+                        <ul class="card-product__imgOverlay">
+                          <li><button class="modal-button" href="#myModal<?php echo $A; ?>"><i class="ti-search"></i></button></li>
+                          <li><button><i class="ti-shopping-cart"></i></button></li>
+                          <li><button><i class="ti-heart"></i></button></li>
+                        </ul>
+                      </div>
+                      <div class="card-body">
+                        <p>Electronics</p>
+                        <h4 class="card-product__title"><a href="#"><?php echo $product->name; ?></a></h4>
+                        <p class="card-product__price"><?php echo $product->price; ?>$</p>
+                      </div>
+                    </div>
+                    <!-- The Modal -->
+                    <div id="myModal<?php echo $A; ?>" class="modal">
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <img class="center" src="img/product/<?php echo $product->image; ?>" alt="" width="200" height="400">
+                        <p><?php echo $product->brand; ?> Computer ideal for home and school use.</p>
+                        <p class="card-product__price"><?php echo $product->price; ?>$</p>
+                      </div>
+                    </div>
+                <!-- </div> -->
+              <?php } ?>
+              </div>
+        </div>
+      
+        
+      <!-- <div class="owl-carousel owl-theme" id="bestSellerCarousel">
         <div class="card text-center card-product">
           <div class="card-product__img">
             <img class="img-fluid" src="img/product/product1.png" alt="">
@@ -73,6 +117,7 @@
               <li><button><i class="ti-heart"></i></button></li>
             </ul>
           </div>
+          
           <div class="card-body">
             <p>Accessories</p>
             <h4 class="card-product__title"><a href="single-product.html">Quartz Belt Watch</a></h4>
@@ -89,6 +134,7 @@
               <li><button><i class="ti-heart"></i></button></li>
             </ul>
           </div>
+
           <div class="card-body">
             <p>Beauty</p>
             <h4 class="card-product__title"><a href="single-product.html">Women Freshwash</a></h4>
@@ -190,8 +236,8 @@
             <h4 class="card-product__title"><a href="single-product.html">Room Flash Light</a></h4>
             <p class="card-product__price">$150.00</p>
           </div>
-        </div>
-      </div>
+        </div> 
+      </div>-->
     </div>
   </section>
   <!-- ================ Sponsor Product End  carousel end ================= -->
