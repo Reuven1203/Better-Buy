@@ -138,7 +138,7 @@
                                       <!-- Modal content -->
                                       <div class="modal-content">
                                           <span class="close">&times;</span>
-                                          <img class="center" src="img/product/<?php echo $product->image; ?>" alt="" width="200" height="400">
+                                          <img class="center" src="/storage/{{$product->image}}" alt="" width="200" height="400">
                                           <p><?php echo $product->brand; ?> Newest Smartphone from 2022</p>
                                           <p class="card-product__price"><?php echo $product->price; ?>$</p>
                                       </div>
