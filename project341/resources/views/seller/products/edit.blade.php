@@ -46,14 +46,13 @@ use App\Http\Controllers\Admin\ProductController;
                                 <input type="number" name="stock" id="stock" class="form-input rounded-md shadow-sm mt-1 block w-full" value=<?php echo $product->stock; ?> />
                             </div>
                             <div class="px-4 py-5 bg-white sm:p-6">
-                                <p style="color:#FF0000">To sponsor your product, please change category to "Sponsor Product"</p>
                                 <x-jet-label for="category" value="category" />
                                 <select name="category" x-model="category" class="px-4 py-5 bg-white sm:p-6" value=<?php echo $product->category; ?>>
                                     <option value="Laptops">Laptops</option>
                                     <option value="Phones">Phones</option>
                                     <option value="TV/Monitor">TV/Monitor</option>
                                     <option value="Tablets">Tablets</option>
-                                    <option value="SponsoredProduct">Sponsor Product</option>
+
 
                                 </select>
                             </div>

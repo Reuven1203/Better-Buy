@@ -50,7 +50,7 @@ use App\Http\Controllers\Admin\ProductController;
                                 <option value="Phones">Phones</option>
                                 <option value="TV/Monitor">TV/Monitor</option>
                                 <option value="Tablets">Tablets</option>
-                                <option value="SponsoredProduct">Sponsor Product</option>
+
 
                             </select>
                         </div>
