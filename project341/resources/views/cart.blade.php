@@ -1,3 +1,9 @@
+<?php
+
+
+
+use App\Models\Product;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,20 +106,22 @@
                                 <th scope="col">Total</th>
                             </tr>
                         </thead>
+                        @foreach ($cartItems as $item)
+                        @if (Product::find($item->id) != null)
                         <tbody>
                             <tr>
                                 <td>
                                     <div class="media">
                                         <div class="d-flex">
-                                            <img src="img/cart/cart1.png" alt="">
+                                            <img src="/storage/{{Product::find($item->id)->image}}" style="width:100px; height:100px;">
                                         </div>
                                         <div class="media-body">
-                                            <p>Minimalistic shop for multipurpose use</p>
+                                            <p>{{Product::find($item->id)->name}}</p>
                                         </div>
                                     </div>
                                 </td>
                                 <td>
-                                    <h5>$360.00</h5>
+                                    <h5>${{Product::find($item->id)->price}}</h5>
                                 </td>
                                 <td>
                                     <div class="product_count">
@@ -123,9 +131,11 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <h5>$720.00</h5>
+                                    <h5>${{Product::find($item->id)->price}}</h5>
                                 </td>
                             </tr>
+                            @endif
+                            @endforeach
                             <tr>
                                 <td>
                                     <div class="media">
