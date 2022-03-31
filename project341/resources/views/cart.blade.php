@@ -1,5 +1,9 @@
 <?php
 
+// $userId = auth()->user()->id;
+// // for a specific user
+// $subTotal = Cart::session($userId)->getSubTotal();
+
 
 
 use App\Models\Product;
@@ -173,7 +177,7 @@ use App\Models\Product;
                                     <h5>Subtotal</h5>
                                 </td>
                                 <td>
-                                    <h5>2360</h5>
+                                    <h5>145</h5>
                                 </td>
                             </tr>
                             <tr class="shipping_area">
