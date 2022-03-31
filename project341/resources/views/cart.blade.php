@@ -104,6 +104,7 @@ use App\Models\Product;
                                 <th scope="col">Price</th>
                                 <th scope="col">Quantity</th>
                                 <th scope="col">Total</th>
+                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         @foreach ($cartItems as $item)
@@ -132,6 +133,13 @@ use App\Models\Product;
                                 </td>
                                 <td>
                                     <h5>${{Product::find($item->id)->price}}</h5>
+                                </td>
+                                <td>
+                                    <form action="{{ route('cart.remove') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" value="{{ $item->id }}" name="id">
+                                        <button class="px-4 py-2 text-white bg-red-600">remove</button>
+                                    </form>
                                 </td>
                             </tr>
                             @endif
@@ -165,7 +173,7 @@ use App\Models\Product;
                                     <h5>Subtotal</h5>
                                 </td>
                                 <td>
-                                    <h5>$2160.00</h5>
+                                    <h5>2360</h5>
                                 </td>
                             </tr>
                             <tr class="shipping_area">
