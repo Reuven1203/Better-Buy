@@ -14,6 +14,9 @@ class CartController extends Controller
         \Cart::session($userId)->add([
             'id' => $request->id,
             'name' => $request->name,
+            'price' => Product::find($request->id)->price,
+            'quantity' => 1,
+            'associatedModel' => Product::find($request->id),
 
         ]);
         $cartItems = \Cart::session($userId)->getContent();
@@ -34,5 +37,27 @@ class CartController extends Controller
         session()->flash('success', 'Item Cart Remove Successfully !');
 
         return redirect()->route('cart.list');
+    }
+
+
+    public function updateCart(Request $request, ){
+        
+
+        $quantity = \Cart::find($request->id)->quantity;
+        $newQuantity = $request->quantity;
+        if($newQuantity>$quantity){
+            $newQty = -1*($quantity-$newQuantity);
+        }else{
+            $newQty = $newQuantity-$quantity;
+        }
+
+        update($request->id, array(
+
+            'quantity' => $newQty,
+        )
+        
+    );
+
+        return view('cart');
     }
 }

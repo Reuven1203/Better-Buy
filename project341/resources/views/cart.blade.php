@@ -1,6 +1,6 @@
 <?php
 
-// $userId = auth()->user()->id;
+$userId = auth()->user()->id;
 // // for a specific user
 // $subTotal = Cart::session($userId)->getSubTotal();
 
@@ -130,7 +130,7 @@ use App\Models\Product;
                                 </td>
                                 <td>
                                     <div class="product_count">
-                                        <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+                                        <input type="text" name="quantity" id="sst" maxlength="12" value="{{$item->quantity}}" title="Quantity:" class="input-text qty">
                                         <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
                                         <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
                                     </div>
@@ -150,7 +150,7 @@ use App\Models\Product;
                             @endforeach
                             <tr class="bottom_button">
                                 <td>
-                                    <a class="button" href="#">Update Cart</a>
+                                    <a class="button" action="{{'cart.update'}}">Update Cart</a>
                                 </td>
                                 <td>
 
@@ -177,7 +177,7 @@ use App\Models\Product;
                                     <h5>Subtotal</h5>
                                 </td>
                                 <td>
-                                    <h5>145</h5>
+                                    <h5>{{\Cart::session($userId)->getSubTotal()}}</h5>
                                 </td>
                             </tr>
                             <tr class="shipping_area">
