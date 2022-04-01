@@ -50,7 +50,8 @@
 
             <ul class="nav-shop">
               <li class="nav-item"><button><i class="ti-search"></i></button></li>
-              <li class="nav-item" ><a href="cart"><button ><i class="ti-shopping-cart"></i><span class="nav-shop__circle">0</span></button> </li>
+              <li class="nav-item"><a href="cart"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">0</span></button> </li>
+
               <li class="nav-item"><button><a class="button button-header>
               @if (Route::has('login'))
                 <div class=" hidden fixed top-0 right-0 px-6 py-4 sm:block">

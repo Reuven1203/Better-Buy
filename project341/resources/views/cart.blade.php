@@ -1,5 +1,4 @@
 <?php
-
 $userId = auth()->user()->id;
 // // for a specific user
 // $subTotal = Cart::session($userId)->getSubTotal();
@@ -7,7 +6,25 @@ $userId = auth()->user()->id;
 
 
 use App\Models\Product;
+
+foreach (\Cart::getContent() as $item) {
+    $itemId = $item->id;
+    if (Product::find($itemId) == null) {
+        \Cart::session($userId)->remove($itemId);
+    } else {
+        \Cart::session($userId)->update($itemId, array(
+            'name' => Product::find($itemId)->name,
+            'price' => Product::find($itemId)->price,
+            'image' => Product::find($itemId)->image,
+
+        ));
+    }
+}
+
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,6 +44,21 @@ use App\Models\Product;
     <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .btn-primary {
+            height: 40px;
+            line-height: 38px;
+            text-transform: uppercase;
+            background: #384aeb;
+            padding: 0px 38px;
+            margin-right: 5px;
+            margin-left: 10px;
+            border-radius: 30px;
+            text-transform: capitalize;
+            font-weight: 500;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -108,11 +140,11 @@ use App\Models\Product;
                                 <th scope="col">Price</th>
                                 <th scope="col">Quantity</th>
                                 <th scope="col">Total</th>
-                                <th scope="col">Action</th>
                             </tr>
                         </thead>
                         @foreach ($cartItems as $item)
                         @if (Product::find($item->id) != null)
+
                         <tbody>
                             <tr>
                                 <td>
@@ -130,28 +162,41 @@ use App\Models\Product;
                                 </td>
                                 <td>
                                     <div class="product_count">
-                                        <input type="text" name="quantity" id="sst" maxlength="12" value="{{$item->quantity}}" title="Quantity:" class="input-text qty">
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
-                                        <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+                                        <form action="{{ route('cart.update') }}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{ $item->id}}">
+                                            <input type="number" name="quantity" value="{{ $item->quantity }}" class="w-6 text-center bg-gray-300" />
+                                            <button type="submit" name="update" nclass="px-2 pb-2 ml-2 text-white bg-blue-500">Update</button>
+                                        </form>
+
                                     </div>
                                 </td>
                                 <td>
-                                    <h5>${{Product::find($item->id)->price}}</h5>
+                                    <h5>{{\Cart::session($userId)->get($item->id)->getPriceSum();}}$</h5>
                                 </td>
                                 <td>
                                     <form action="{{ route('cart.remove') }}" method="POST">
                                         @csrf
                                         <input type="hidden" value="{{ $item->id }}" name="id">
-                                        <button class="px-4 py-2 text-white bg-red-600">remove</button>
+
+
+
+
+                                        <button class="btn-primary">Remove</button>
+
+
+
+
+
                                     </form>
+
                                 </td>
                             </tr>
                             @endif
                             @endforeach
                             <tr class="bottom_button">
-                                <td>
-                                    <a class="button" action="{{'cart.update'}}">Update Cart</a>
-                                </td>
+
+
                                 <td>
 
                                 </td>
@@ -177,7 +222,7 @@ use App\Models\Product;
                                     <h5>Subtotal</h5>
                                 </td>
                                 <td>
-                                    <h5>{{\Cart::session($userId)->getSubTotal()}}</h5>
+                                    <h5>{{\Cart::session($userId)->getSubTotal()}}$</h5>
                                 </td>
                             </tr>
                             <tr class="shipping_area">

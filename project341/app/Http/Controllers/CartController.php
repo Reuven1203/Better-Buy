@@ -40,24 +40,18 @@ class CartController extends Controller
     }
 
 
-    public function updateCart(Request $request, ){
-        
+    public function updateCart(Request $request)
+    {
+        \Cart::session(auth()->user()->id)->update($request->id, array(
+            'quantity' => [
+                'relative' => false,
+                'value' => $request->quantity
+            ],
+        ));
 
-        $quantity = \Cart::find($request->id)->quantity;
-        $newQuantity = $request->quantity;
-        if($newQuantity>$quantity){
-            $newQty = -1*($quantity-$newQuantity);
-        }else{
-            $newQty = $newQuantity-$quantity;
-        }
 
-        update($request->id, array(
+        session()->flash('success', 'Item Cart is Updated Successfully !');
 
-            'quantity' => $newQty,
-        )
-        
-    );
-
-        return view('cart');
+        return redirect()->route('cart.list');
     }
 }
