@@ -113,22 +113,16 @@
 
                         $products = DB::table('products')->where('category', 'TV/Monitor')->get();
                         $A = 0;
-
-                        $A++;
+                        foreach ($products as $product) {
+                            $A++;
                         ?>
-                        @foreach($products as $product)
-                        <form method="POST" action="{{route('cart.store')}}" enctype="multipart/form-data">
-                            @csrf
-                            <input type="hidden" name="id" value="{{$product->id}}" />
-                            <input type="hidden" value="{{ $product->name }}" name="name">
-                            <input type="hidden" value="{{ $product->price }}" name="price">
                             <div class="col-md-6 col-lg-4">
                                 <div class="card text-center card-product">
                                     <div class="card-product__img">
                                         <img class="card-img" src="/storage/{{$product->image}}" alt="" width="100" height="100">
                                         <ul class="card-product__imgOverlay">
                                             <li><button class="modal-button" href="#myModal<?php echo $A; ?>"><i class="ti-search"></i></button></li>
-                                            <li> <button type="submit"><i class="ti-shopping-cart"></i></button></li>
+                                            <li><button><i class="ti-shopping-cart"></i></button></li>
                                             <li><button><i class="ti-heart"></i></button></li>
                                         </ul>
                                     </div>
@@ -143,16 +137,14 @@
                                     <!-- Modal content -->
                                     <div class="modal-content">
                                         <span class="close">&times;</span>
-                                        <img class="center" src="img/product/<?php echo $product->image; ?>" alt="" width="200" height="400">
-                                        <p><?php echo $product->brand; ?> Computer ideal for home and school use.</p>
+                                        <img class="center" src="/storage/{{$product->image}}" alt="" width="200" height="400">
+                                        <p><?php echo $product->brand; ?> Futuristic TV's/Monitors that will enhance your house.</p>
                                         <p class="card-product__price"><?php echo $product->price; ?>$</p>
                                     </div>
                                 </div>
                             </div>
-                        </form>
-
-                        <!-- End Best Seller -->
-                        @endforeach
+                            <!-- End Best Seller -->
+                        <?php } ?>
                     </div>
             </div>
         </div>

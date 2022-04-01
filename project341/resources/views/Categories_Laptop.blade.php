@@ -117,6 +117,7 @@ use App\Http\Controllers\CartController;
 
             $products = DB::table('products')->where('category', 'Laptops')->get();
             $A = 0;
+
             $A++;
             ?>
             @foreach ($products as $product)
@@ -125,13 +126,16 @@ use App\Http\Controllers\CartController;
               <input type="hidden" name="id" value="{{$product->id}}" />
               <input type="hidden" value="{{ $product->name }}" name="name">
               <input type="hidden" value="{{ $product->price }}" name="price">
+
               <div class="col-md-6 col-lg-4">
                 <div class="card text-center card-product">
                   <div class="card-product__img">
                     <img class="card-img" src="/storage/{{$product->image}}" alt="" width="100" height="100">
                     <ul class="card-product__imgOverlay">
                       <li><button class="modal-button" href="#myModal<?php echo $A; ?>"><i class="ti-search"></i></button></li>
+
                       <li> <button type="submit"><i class="ti-shopping-cart"></i></button></li>
+
                       <li><button><i class="ti-heart"></i></button></li>
                     </ul>
                   </div>
@@ -152,13 +156,14 @@ use App\Http\Controllers\CartController;
                   </div>
                 </div>
               </div>
+
             </form>
 
             <!-- End Best Seller -->
             @endforeach
           </div>
 
-          <<<<<<< HEAD=======>>>>>>> customer-cart
+
       </div>
     </div>
 </section>
