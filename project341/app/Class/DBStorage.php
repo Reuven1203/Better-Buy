@@ -1,6 +1,8 @@
 <?php
 
-use App\DatabaseStorageModel;
+namespace App\Class;
+
+use App\Models\DatabaseStorageModel;
 use Darryldecode\Cart\CartCollection;
 
 class DBStorage

@@ -28,6 +28,7 @@ class CartController extends Controller
         $userId = auth()->user()->id;
         $cartItems = \Cart::session($userId)->getContent();
         // dd($cartItems);
+
         return view('cart', compact('cartItems', 'userId'));
     }
 
@@ -41,27 +42,18 @@ class CartController extends Controller
     }
 
 
-    public function updateCart(Request $request,)
+    public function updateCart(Request $request)
     {
+        \Cart::session(auth()->user()->id)->update($request->id, array(
+            'quantity' => [
+                'relative' => false,
+                'value' => $request->quantity
+            ],
+        ));
 
 
-        $quantity = \Cart::find($request->id)->quantity;
-        $newQuantity = $request->quantity;
-        if ($newQuantity > $quantity) {
-            $newQty = -1 * ($quantity - $newQuantity);
-        } else {
-            $newQty = $newQuantity - $quantity;
-        }
+        session()->flash('success', 'Item Cart is Updated Successfully !');
 
-        update(
-            $request->id,
-            array(
-
-                'quantity' => $newQty,
-            )
-
-        );
-
-        return view('cart');
+        return redirect()->route('cart.list');
     }
 }
