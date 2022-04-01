@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
 use App\Models\Product;
 
@@ -28,7 +27,6 @@ class CartController extends Controller
         $userId = auth()->user()->id;
         $cartItems = \Cart::session($userId)->getContent();
         // dd($cartItems);
-
         return view('cart', compact('cartItems', 'userId'));
     }
 
