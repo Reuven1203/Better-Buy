@@ -1,3 +1,7 @@
+<?php
+
+use App\Http\Controllers\CartController;
+?>
 <!--================ Header start =================-->
 @include('layouts.header')
 <!--================ Header end =================-->
@@ -106,47 +110,56 @@
         @livewire('laptop')
         @endif
         <section class="lattest-product-area pb-40 category-list">
-        <div class="row">
-        <?php 
-        use Illuminate\Support\Facades\DB;
-        $products = DB::table('products')->where('category', 'Laptops')->get();
-        $A=0;
-        foreach ($products as $product) {
-        $A++;
-        ?>
-        <div class="col-md-6 col-lg-4">
-            <div class="card text-center card-product">
-                <div class="card-product__img">
-                    <img class="card-img" src="img/product/<?php echo $product->image; ?>" alt="" width="100" height="100">
+          <div class="row">
+            <?php
+
+            use Illuminate\Support\Facades\DB;
+
+            $products = DB::table('products')->where('category', 'Laptops')->get();
+            $A = 0;
+            $A++;
+            ?>
+            @foreach ($products as $product)
+            <form method="POST" action="{{route('cart.store')}}" enctype="multipart/form-data">
+              @csrf
+              <input type="hidden" name="id" value="{{$product->id}}" />
+              <input type="hidden" value="{{ $product->name }}" name="name">
+              <input type="hidden" value="{{ $product->price }}" name="price">
+              <div class="col-md-6 col-lg-4">
+                <div class="card text-center card-product">
+                  <div class="card-product__img">
+                    <img class="card-img" src="/storage/{{$product->image}}" alt="" width="100" height="100">
                     <ul class="card-product__imgOverlay">
-                        <li><button class="modal-button" href="#myModal<?php echo $A; ?>"><i class="ti-search"></i></button></li>
-                        <li><button><i class="ti-shopping-cart"></i></button></li>
-                        <li><button><i class="ti-heart"></i></button></li>
+                      <li><button class="modal-button" href="#myModal<?php echo $A; ?>"><i class="ti-search"></i></button></li>
+                      <li> <button type="submit"><i class="ti-shopping-cart"></i></button></li>
+                      <li><button><i class="ti-heart"></i></button></li>
                     </ul>
-                </div>
-                <div class="card-body">
+                  </div>
+                  <div class="card-body">
                     <p>Electronics</p>
                     <h4 class="card-product__title"><a href="#"><?php echo $product->name; ?></a></h4>
                     <p class="card-product__price"><?php echo $product->price; ?>$</p>
+                  </div>
                 </div>
-            </div>
-            <!-- The Modal -->
-            <div id="myModal<?php echo $A; ?>" class="modal">
-                <!-- Modal content -->
-                <div class="modal-content">
+                <!-- The Modal -->
+                <div id="myModal<?php echo $A; ?>" class="modal">
+                  <!-- Modal content -->
+                  <div class="modal-content">
                     <span class="close">&times;</span>
                     <img class="center" src="img/product/<?php echo $product->image; ?>" alt="" width="200" height="400">
                     <p><?php echo $product->brand; ?> Computer ideal for home and school use.</p>
                     <p class="card-product__price"><?php echo $product->price; ?>$</p>
+                  </div>
                 </div>
-            </div>
-        </div>
-        <!-- End Best Seller -->
-        <?php } ?>
-      </div>
+              </div>
+            </form>
 
+            <!-- End Best Seller -->
+            @endforeach
+          </div>
+
+      </div>
     </div>
-  </div>
 </section>
 <!-- ================ category section end ================= -->
 
