@@ -21,7 +21,7 @@
             <h4>Welcome to BetterBuy</h4>
             <h1>We are simply better</h1>
             <p>The better tech e-commerce platform! We make BestBuy look like a joke.</p>
-            <a class="button button-hero" href="#">Browse Now</a>
+            <a class="button button-hero" href={{'cart'}}>Browse Now</a>
           </div>
         </div>
       </div>
@@ -113,7 +113,9 @@
             <img class="img-fluid" src="img/product/product1.png" alt="">
             <ul class="card-product__imgOverlay">
               <li><button><i class="ti-search"></i></button></li>
-              <li><button><i class="ti-shopping-cart"></i></button></li>
+              <a href={{'cart'}}>
+                <li><button><i class="ti-shopping-cart"></i></button></li>
+              </a>
               <li><button><i class="ti-heart"></i></button></li>
             </ul>
           </div>
