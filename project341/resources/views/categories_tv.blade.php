@@ -117,12 +117,12 @@
                         $A++;
                         ?>
                         @foreach($products as $product)
-                        <form method="POST" action="{{route('cart.store')}}" enctype="multipart/form-data">
-                            @csrf
-                            <input type="hidden" name="id" value="{{$product->id}}" />
-                            <input type="hidden" value="{{ $product->name }}" name="name">
-                            <input type="hidden" value="{{ $product->price }}" name="price">
-                            <div class="col-md-6 col-lg-4">
+                        <div class="col-md-6 col-lg-4">
+                            <form method="POST" action="{{route('cart.store')}}" enctype="multipart/form-data">
+                                @csrf
+                                <input type="hidden" name="id" value="{{$product->id}}" />
+                                <input type="hidden" value="{{ $product->name }}" name="name">
+                                <input type="hidden" value="{{ $product->price }}" name="price">
                                 <div class="card text-center card-product">
                                     <div class="card-product__img">
                                         <img class="card-img" src="/storage/{{$product->image}}" alt="" width="100" height="100">
@@ -148,9 +148,8 @@
                                         <p class="card-product__price"><?php echo $product->price; ?>$</p>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-
+                            </form>
+                        </div>
                         <!-- End Best Seller -->
                         @endforeach
                     </div>
