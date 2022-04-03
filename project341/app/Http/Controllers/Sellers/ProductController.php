@@ -86,6 +86,7 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
+
         $product = Product::find($id);
         return view('seller.products.edit', compact('product'));
     }
@@ -121,7 +122,6 @@ class ProductController extends Controller
             'category' => $data['category'],
 
         ]);
-
         $user = auth()->user();
         return view('seller.products.index', compact('user'));
 
