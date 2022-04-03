@@ -146,7 +146,6 @@
               <!-- End Best Seller -->
             <?php } ?>
           </div>
-
       </div>
     </div>
 </section>
