@@ -162,8 +162,6 @@ use App\Http\Controllers\CartController;
             <!-- End Best Seller -->
             @endforeach
           </div>
-
-
       </div>
     </div>
 </section>
