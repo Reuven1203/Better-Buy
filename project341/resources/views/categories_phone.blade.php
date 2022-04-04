@@ -148,7 +148,6 @@
                                           <img class="center" src="img/product/<?php echo $product->image; ?>" alt="" width="200" height="400">
                                           <p><?php echo $product->brand; ?> Computer ideal for home and school use.</p>
                                           <p class="card-product__price"><?php echo $product->price; ?>$</p>
-                                          <button type="submit"><i class="ti-shopping-cart"></i></button>
                                       </div>
                                   </div>
                               </form>
