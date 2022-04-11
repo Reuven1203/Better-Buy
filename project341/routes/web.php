@@ -25,6 +25,10 @@ Route::get('category', function () {
     return view('category');
 });
 
+Route::get('checkout', function () {
+    return view('checkout');
+});
+
 // Route::get('index', function () {
 //     return view('index');
 // });

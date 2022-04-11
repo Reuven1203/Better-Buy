@@ -188,6 +188,7 @@ input[type=text] {
                                 <th scope="col">Total</th>
                             </tr>
                         </thead>
+                        <?php $cartItems=\Cart::session($userId)->getContent()?>
                         @foreach ($cartItems as $item)
                         @if (Product::find($item->id) != null)
 
