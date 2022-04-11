@@ -401,9 +401,9 @@
       <div class="row">
         <div class="col-xl-5">
           <div class="offer__content text-center">
-            <h3>Up To 50% Off</h3>
-            <h4>Winter Sale</h4>
-            <p>Him she'd let them sixth saw light</p>
+            <h3>Best Deals for Students!</h3>
+            <h4>Don't Miss Out!</h4>
+            <p>Students Can Receive an Additional 15% Off Sale Price</p>
             <a class="button button--active mt-3 mt-xl-4" href="category">Shop Now</a>
           </div>
         </div>
