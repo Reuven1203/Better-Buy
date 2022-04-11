@@ -21,7 +21,7 @@
             <h4>Welcome to BetterBuy</h4>
             <h1>We are simply better</h1>
             <p>The better tech e-commerce platform! We make BestBuy look like a joke.</p>
-            <a class="button button-hero" href={{'cart'}}>Browse Now</a>
+            <a class="button button-hero" href=category>Browse Now</a>
           </div>
         </div>
       </div>
@@ -404,7 +404,7 @@
             <h3>Up To 50% Off</h3>
             <h4>Winter Sale</h4>
             <p>Him she'd let them sixth saw light</p>
-            <a class="button button--active mt-3 mt-xl-4" href="#">Shop Now</a>
+            <a class="button button--active mt-3 mt-xl-4" href="category">Shop Now</a>
           </div>
         </div>
       </div>
