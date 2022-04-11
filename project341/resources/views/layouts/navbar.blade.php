@@ -16,8 +16,7 @@
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
                 <ul class="dropdown-menu">
                   <li class="nav-item"><a class="nav-link" href="category">Shop Category</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/">Product
-                      Details</a></li>
+
                   <li class="nav-item"><a class="nav-link" href="/">Product Checkout</a>
                   </li>
                   <!-- <li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a>
@@ -41,7 +40,6 @@
                 <ul class="dropdown-menu">
                   <li class="nav-item"><a class="nav-link" href="/">Login</a></li>
                   <li class="nav-item"><a class="nav-link" href="/">Register</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/">Tracking</a>
                   </li>
                 </ul>
               </li>
