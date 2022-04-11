@@ -95,7 +95,7 @@
                         <div class="input-group filter-bar-search">
                             <input type="text" placeholder="Search">
                             <div class="input-group-append">
-                                <!-- <button type="button"><i class="ti-search"></i></button> -->
+                                <button type="button"><i class="ti-search"></i></button>
                             </div>
                         </div>
                     </div>
