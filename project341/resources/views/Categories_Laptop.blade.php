@@ -118,9 +118,10 @@ use App\Http\Controllers\CartController;
             $products = DB::table('products')->where('category', 'Laptops')->get();
             $A = 0;
 
-            $A++;
+            
             ?>
             @foreach ($products as $product)
+            <?php $A++ ?>
             <div class="col-md-6 col-lg-4">
               <form method="POST" action="{{route('cart.store')}}" enctype="multipart/form-data">
                 @csrf
