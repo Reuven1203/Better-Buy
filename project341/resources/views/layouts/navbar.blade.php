@@ -11,7 +11,7 @@
           </button>
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav ml-auto mr-auto">
-              <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
               <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
                 <ul class="dropdown-menu">
@@ -47,8 +47,8 @@
             </ul>
 
             <ul class="nav-shop">
-              <li class="nav-item"><button><i class="ti-search"></i></button></li>
-              <li class="nav-item"><a href="cart"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">0</span></button> </li>
+              <!-- <li class="nav-item"><button><i class="ti-search"></i></button></li> -->
+              <li class="nav-item"><a href="login"><button><i class="ti-shopping-cart"></i><span class="nav-shop__circle">0</span></button> </li>
 
               <li class="nav-item"><button><a class="button button-header>
               @if (Route::has('login'))
