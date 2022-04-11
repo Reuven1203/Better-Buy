@@ -7,7 +7,7 @@
             <div class="single-footer-widget tp_widgets">
               <h4 class="footer_title large_title">Our Mission</h4>
               <p>
-               Provide BETTER electronic items!
+               At Betterbuy we bring high quality electronics to tech savy consumers by making it easier than ever to buy electronics online.
               </p>
             </div>
           </div>
@@ -18,7 +18,7 @@
                 <li><a href="index">Home</a></li>
                 <li><a href="category">Shop</a></li>
                 <!-- <li><a href="#">Blog</a></li> -->
-                <li><a href="category">Product</a></li>
+                <li><a href="index">Pages</a></li>
                 <!-- <li><a href="#">Brand</a></li> -->
                 <li><a href="#">Contact</a></li>
               </ul>
@@ -45,15 +45,14 @@
                   <span class="fa fa-location-arrow"></span>
                   Head Office
                 </p>
-                <p>123, Main Street, Your City</p>
+                <p>1455 Boulevard de Maisonneuve O, Montréal, QC H3G 1M8</p>
 
                 <p class="sm-head">
                   <span class="fa fa-phone"></span>
                   Phone Number
                 </p>
                 <p>
-                  +123 456 7890 <br>
-                  +123 456 7890
+                 (514) 848-2424
                 </p>
 
                 <p class="sm-head">
@@ -61,8 +60,8 @@
                   Email
                 </p>
                 <p>
-                  free@infoexample.com <br>
-                  www.infoexample.com
+                  betterbuy@infoexample.com <br>
+                  www.betterbuy.com
                 </p>
               </div>
             </div>
