@@ -1,6 +1,6 @@
  <!--================ Start footer Area  =================-->
  <footer>
-    <div class="footer-area">
+    <div id="contact" class="footer-area">
       <div class="container">
         <div class="row section_gap">
           <div class="col-lg-3 col-md-6 col-sm-6">

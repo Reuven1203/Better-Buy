@@ -38,12 +38,12 @@
               <li class="nav-item submenu dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a class="nav-link" href="/">Login</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/">Register</a></li>
+                  <li class="nav-item"><a class="nav-link" href="login">Login</a></li>
+                  <li class="nav-item"><a class="nav-link" href="register">Register</a></li>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item"><a class="nav-link" href="/">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
 
             <ul class="nav-shop">
