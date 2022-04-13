@@ -46,7 +46,7 @@ $allProducts = Product::all();
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
                                     @if (auth()->user()->role_id != "Admin" && auth()->user()->role_id == "Client")
-                                    @foreach ($user->order as $order)
+                                    @foreach ($user->orders as $order)
                                     <tr>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                             {{ $order->id }}
