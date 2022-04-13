@@ -44,6 +44,7 @@ foreach (\Cart::getContent() as $item) {
     <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         .btn-primary {
             height: 40px;
@@ -58,6 +59,49 @@ foreach (\Cart::getContent() as $item) {
             font-weight: 500;
             color: #fff;
         }
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
     </style>
 </head>
 
@@ -79,7 +123,8 @@ foreach (\Cart::getContent() as $item) {
                             <li class="nav-item active submenu dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="category">Shop Category</a></li>>
+                                    <li class="nav-item"><a class="nav-link" href="category">Shop Category</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="single-product.html">Product Details</a></li>
                                     <li class="nav-item"><a class="nav-link" href="checkout.html">Product Checkout</a></li>
                                     <li class="nav-item"><a class="nav-link" href="confirmation.html">Confirmation</a></li>
                                     <li class="nav-item"><a class="nav-link" href="cart.html">Shopping Cart</a></li>
@@ -89,6 +134,7 @@ foreach (\Cart::getContent() as $item) {
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="tracking-order.html">Tracking</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -111,11 +157,11 @@ foreach (\Cart::getContent() as $item) {
         <div class="container h-100">
             <div class="blog-banner">
                 <div class="text-center">
-                    <h1>Shopping Cart</h1>
+                    <h1>Checkout</h1>
                     <nav aria-label="breadcrumb" class="banner-breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+                            <li class="breadcrumb-item active" aria-current="page">Checkout</li>
                         </ol>
                     </nav>
                 </div>
@@ -129,6 +175,8 @@ foreach (\Cart::getContent() as $item) {
     <!--================Cart Area =================-->
     <section class="cart_area">
         <div class="container">
+            <h3>Order Confirmation</h3>
+            <p></p>
             <div class="cart_inner">
                 <div class="table-responsive">
                     <table class="table">
@@ -140,6 +188,7 @@ foreach (\Cart::getContent() as $item) {
                                 <th scope="col">Total</th>
                             </tr>
                         </thead>
+                        <?php $cartItems=\Cart::session($userId)->getContent()?>
                         @foreach ($cartItems as $item)
                         @if (Product::find($item->id) != null)
 
@@ -164,30 +213,12 @@ foreach (\Cart::getContent() as $item) {
                                             @csrf
                                             <input type="hidden" name="id" value="{{ $item->id}}">
                                             <input type="number" name="quantity" value="{{ $item->quantity }}" class="w-6 text-center bg-gray-300" />
-                                            <button type="submit" name="update" nclass="px-2 pb-2 ml-2 text-white bg-blue-500">Update</button>
                                         </form>
 
                                     </div>
                                 </td>
                                 <td>
                                     <h5>{{\Cart::session($userId)->get($item->id)->getPriceSum();}}$</h5>
-                                </td>
-                                <td>
-                                    <form action="{{ route('cart.remove') }}" method="POST">
-                                        @csrf
-                                        <input type="hidden" value="{{ $item->id }}" name="id">
-
-
-
-
-                                        <button class="btn-primary">Remove</button>
-
-
-
-
-
-                                    </form>
-
                                 </td>
                             </tr>
                             @endif
@@ -201,13 +232,7 @@ foreach (\Cart::getContent() as $item) {
                                 <td>
 
                                 </td>
-                                <td>
-                                    <div class="cupon_text d-flex align-items-center">
-                                        <input type="text" placeholder="Coupon Code">
-                                        <a class="primary-btn" href="#">Apply</a>
-                                        <a class="button" href="#">Have a Coupon?</a>
-                                    </div>
-                                </td>
+                            
                             </tr>
                             <tr>
                                 <td>
@@ -234,29 +259,74 @@ foreach (\Cart::getContent() as $item) {
                                     <h5>Shipping</h5>
                                 </td>
                                 <td>
-                                    <div class="shipping_box">
-                                        <ul class="list">
-                                            <li><a href="#">Flat Rate: $5.00</a></li>
-                                            <li><a href="#">Free Shipping</a></li>
-                                            <li><a href="#">Flat Rate: $10.00</a></li>
-                                            <li class="active"><a href="#">Local Delivery: $2.00</a></li>
-                                        </ul>
-                                        <h6>Calculate Shipping <i class="fa fa-caret-down" aria-hidden="true"></i></h6>
-                                        <select class="shipping_select">
-                                            <option value="1">Bangladesh</option>
-                                            <option value="2">India</option>
-                                            <option value="4">Pakistan</option>
-                                        </select>
-                                        <select class="shipping_select">
-                                            <option value="1">Select a State</option>
-                                            <option value="2">Select a State</option>
-                                            <option value="4">Select a State</option>
-                                        </select>
-                                        <input type="text" placeholder="Postcode/Zipcode">
-                                        <a class="gray_btn" href="#">Update Details</a>
-                                    </div>
+                                    <p>Free Shipping</p>
                                 </td>
                             </tr>
+                                        <tr>                                         
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <h5>Billing Address</h5>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h5>Payment</h5>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+      </form>
+    </div>
+  </div>
+</tr>
+                                
                             <tr class="out_button_area">
                                 <td class="d-none-l">
 
@@ -269,8 +339,8 @@ foreach (\Cart::getContent() as $item) {
                                 </td>
                                 <td>
                                     <div class="checkout_btn_inner d-flex align-items-center">
-                                        <a class="gray_btn" href="#">Continue Shopping</a>
-                                        <a class="primary-btn ml-2" href="checkout">Proceed to checkout</a>
+                                        <a class="gray_btn" href="cart">Back to Cart</a>
+                                        <a class="primary-btn ml-2" href="#">Confirm Order</a>
                                     </div>
                                 </td>
                             </tr>
