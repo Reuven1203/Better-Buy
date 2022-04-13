@@ -344,7 +344,7 @@ foreach (\Cart::getContent() as $item) {
                                 <td>
                                     <div class="checkout_btn_inner d-flex align-items-center">
                                         <a class="gray_btn" href="cart">Back to Cart</a>
-                                        <a class="primary-btn ml-2" href="#">Confirm Order</a>
+                                        <a class="primary-btn ml-2" href="index">Confirm Order</a>
                                     </div>
                                 </td>
                             </tr>
