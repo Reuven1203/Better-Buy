@@ -95,36 +95,24 @@ $allProducts = Product::all();
                                     @endforeach
                                     @endif
                                     @if(auth()->user()->role_id == 'Admin')
-                                    @foreach ($allProducts as $product)
+                                    @foreach ($allProducts as $order)
 
                                     <tr>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{ $product->user_id }}
+                                            {{ $order->user_id }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{ $product->id }}
+                                            {{ $order->id }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                             <img src="/storage/{{$product->image}}" alt="">
                                         </td>
 
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{ $product->name }}
-                                        </td>
-
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{ $product->brand }}
-                                        </td>
-
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{ $product->stock }}
-                                        </td>
-
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{ $product->price }}
+                                            {{ $order->name }}
                                         </td>
                                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                            {{ $product->category }}
+                                            {{ $order->price }}
                                         </td>
                                         <td>
                                             <form class="inline-block" action="{{ route('seller.products.edit', $product->id) }}" method="get">
