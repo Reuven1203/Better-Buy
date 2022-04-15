@@ -1,0 +1,52 @@
+PHP Fatal error:  Uncaught Illuminate\Contracts\Container\BindingResolutionException: Target [Illuminate\Contracts\Auth\Factory] is not instantiable. in /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Container/Container.php:1089
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Container/Container.php(886): Illuminate\Container\Container->notInstantiable('Illuminate\\Cont...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('Illuminate\\Cont...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Container\Container->resolve('Illuminate\\Cont...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(119): Illuminate\Container\Container->make('Illuminate\\Cont...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(160): app('Illuminate\\Cont...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/resources/views/checkout.blade.php(2): auth()
+#6 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Util/FileLoader.php(65): include_once('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Util/FileLoader.php(49): PHPUnit\Util\FileLoader::load('/Applications/X...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Runner/StandardTestSuiteLoader.php(43): PHPUnit\Util\FileLoader::checkAndLoad('/Applications/X...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(146): PHPUnit\Runner\StandardTestSuiteLoader->load('/Applications/X...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(112): PHPUnit\Runner\BaseTestRunner->loadSuiteClass('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php(120): PHPUnit\Runner\BaseTestRunner->getTest('/Applications/X...', Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php(96): PHPUnit\TextUI\Command->run(Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/phpunit(98): PHPUnit\TextUI\Command::main()
+#14 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/bin/phpunit(120): include('/Applications/X...')
+#15 {main}
+
+Next PHPUnit\TextUI\RuntimeException: Target [Illuminate\Contracts\Auth\Factory] is not instantiable. in /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php:98
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/phpunit(98): PHPUnit\TextUI\Command::main()
+#1 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/bin/phpunit(120): include('/Applications/X...')
+#2 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php on line 98
+
+Fatal error: Uncaught Illuminate\Contracts\Container\BindingResolutionException: Target [Illuminate\Contracts\Auth\Factory] is not instantiable. in /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Container/Container.php:1089
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Container/Container.php(886): Illuminate\Container\Container->notInstantiable('Illuminate\\Cont...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('Illuminate\\Cont...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Container\Container->resolve('Illuminate\\Cont...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(119): Illuminate\Container\Container->make('Illuminate\\Cont...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(160): app('Illuminate\\Cont...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/resources/views/checkout.blade.php(2): auth()
+#6 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Util/FileLoader.php(65): include_once('/Applications/X...')
+#7 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Util/FileLoader.php(49): PHPUnit\Util\FileLoader::load('/Applications/X...')
+#8 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Runner/StandardTestSuiteLoader.php(43): PHPUnit\Util\FileLoader::checkAndLoad('/Applications/X...')
+#9 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(146): PHPUnit\Runner\StandardTestSuiteLoader->load('/Applications/X...')
+#10 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(112): PHPUnit\Runner\BaseTestRunner->loadSuiteClass('/Applications/X...')
+#11 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php(120): PHPUnit\Runner\BaseTestRunner->getTest('/Applications/X...', Array)
+#12 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php(96): PHPUnit\TextUI\Command->run(Array, true)
+#13 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/phpunit(98): PHPUnit\TextUI\Command::main()
+#14 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/bin/phpunit(120): include('/Applications/X...')
+#15 {main}
+
+Next PHPUnit\TextUI\RuntimeException: Target [Illuminate\Contracts\Auth\Factory] is not instantiable. in /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php:98
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/phpunit(98): PHPUnit\TextUI\Command::main()
+#1 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/bin/phpunit(120): include('/Applications/X...')
+#2 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php on line 98
+The terminal process "/bin/zsh '-c', ''/Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/bin/phpunit' --colors=always '/Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/resources/views/checkout.blade.php''" terminated with exit code: 255.

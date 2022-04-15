@@ -1,0 +1,42 @@
+PHP Fatal error:  Uncaught RuntimeException: A facade root has not been set. in /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:334
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/resources/views/Categories_Laptop.blade.php(118): Illuminate\Support\Facades\Facade::__callStatic('table', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Util/FileLoader.php(65): include_once('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Util/FileLoader.php(49): PHPUnit\Util\FileLoader::load('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Runner/StandardTestSuiteLoader.php(43): PHPUnit\Util\FileLoader::checkAndLoad('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(146): PHPUnit\Runner\StandardTestSuiteLoader->load('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(112): PHPUnit\Runner\BaseTestRunner->loadSuiteClass('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php(120): PHPUnit\Runner\BaseTestRunner->getTest('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php(96): PHPUnit\TextUI\Command->run(Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/phpunit(98): PHPUnit\TextUI\Command::main()
+#9 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/bin/phpunit(120): include('/Applications/X...')
+#10 {main}
+
+Next PHPUnit\TextUI\RuntimeException: A facade root has not been set. in /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php:98
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/phpunit(98): PHPUnit\TextUI\Command::main()
+#1 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/bin/phpunit(120): include('/Applications/X...')
+#2 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php on line 98
+
+Fatal error: Uncaught RuntimeException: A facade root has not been set. in /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php:334
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/resources/views/Categories_Laptop.blade.php(118): Illuminate\Support\Facades\Facade::__callStatic('table', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Util/FileLoader.php(65): include_once('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Util/FileLoader.php(49): PHPUnit\Util\FileLoader::load('/Applications/X...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Runner/StandardTestSuiteLoader.php(43): PHPUnit\Util\FileLoader::checkAndLoad('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(146): PHPUnit\Runner\StandardTestSuiteLoader->load('/Applications/X...')
+#5 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/Runner/BaseTestRunner.php(112): PHPUnit\Runner\BaseTestRunner->loadSuiteClass('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php(120): PHPUnit\Runner\BaseTestRunner->getTest('/Applications/X...', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php(96): PHPUnit\TextUI\Command->run(Array, true)
+#8 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/phpunit(98): PHPUnit\TextUI\Command::main()
+#9 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/bin/phpunit(120): include('/Applications/X...')
+#10 {main}
+
+Next PHPUnit\TextUI\RuntimeException: A facade root has not been set. in /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php:98
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/phpunit(98): PHPUnit\TextUI\Command::main()
+#1 /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/bin/phpunit(120): include('/Applications/X...')
+#2 {main}
+  thrown in /Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/phpunit/phpunit/src/TextUI/Command.php on line 98
+The terminal process "/bin/zsh '-c', ''/Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/vendor/bin/phpunit' --colors=always '/Applications/XAMPP/xamppfiles/htdocs/TeamF_SOEN341Project2022/project341/resources/views/Categories_Laptop.blade.php''" terminated with exit code: 255.
